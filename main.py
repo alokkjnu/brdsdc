@@ -1,15 +1,15 @@
 
 """
-Baba Ramdev Smarak Post Graduate College Website
+Baba Ramdev Smarak Mahavidyalaya Website
 VayuAPI + Jinja2 Templating
 """
 
 from vayuapi import VayuAPI, Jinja2Templates, StaticFiles, Request
 
 app = VayuAPI(
-    title="BRSPGC - Baba Ramdev Smarak Post Graduate College",
+    title="BRSM - Baba Ramdev Smarak Mahavidyalaya",
     version="1.0.0",
-    description="Official website of Baba Ramdev Smarak Post Graduate College, Bartar, Nonahara,Ghazipur (U.P.)",
+    description="Official website of Baba Ramdev Smarak Mahavidyalaya, Bartar, Nonahara,Ghazipur (U.P.)",
     docs_enabled=False,
 )
 
@@ -25,9 +25,9 @@ templates = Jinja2Templates(directory="templates")
 def base_ctx(request: Request, title: str = "", page: str = "") -> dict:
     return {
         "request": request,
-        "site_title": "BRSPGC",
-        "college_name_en": "BABA RAMDEV SMARAK POST GRADUATE COLLEGE",
-        "college_name_hi": "बाबा रामदेव स्मारक स्नातकोत्तर महाविद्यालय",
+        "site_title": "BRSM",
+        "college_name_en": "BABA RAMDEV SMARAK MAHAVIDYALAYA",
+        "college_name_hi": "बाबा रामदेव स्मारक महाविद्यालय",
         "college_location_en": "BARTAR, NONAHARA, GHAZIPUR (U.P.)",
         "college_location_hi": "बरतर, नोनहरा, गाज़ीपुर (उ0प्र0)",
         "college_code": "0513",
