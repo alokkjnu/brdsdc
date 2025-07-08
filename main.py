@@ -88,6 +88,7 @@ async def accreditation(request: Request):
 
 @app.get("/about/facilities")
 async def facilities(request: Request):
+    
     ctx = base_ctx(request, "Facilities", "about")
     ctx["sub_page"] = "facilities"
     return templates.TemplateResponse("about/facilities.html", ctx)
