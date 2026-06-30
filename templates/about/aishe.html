@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block breadcrumb %}<div class="page-hero"><div class="container page-hero-content">
+  <h1><i class="fas fa-certificate"></i> AISHE Certificate</h1>
+  <nav class="breadcrumb-nav"><a href="/">Home</a><span>/</span><a href="/about">About Us</a><span>/</span><span>AISHE Certificate</span></nav>
+</div></div>{% endblock %}
+{% block content %}
+<div class="page-layout" style="padding-top:32px;">
+  <aside class="sidebar"><div class="sidebar-card"><div class="sidebar-header"><i class="fas fa-info-circle"></i> About Us</div><ul class="sidebar-links">
+    <li><a href="/about"><i class="fas fa-building"></i> About College</a></li>
+    <li><a href="/about/vision-mission"><i class="fas fa-eye"></i> Vision &amp; Mission</a></li>
+    <li><a href="/about/aishe" class="active"><i class="fas fa-certificate"></i> AISHE Certificate</a></li>
+    <li><a href="/about/development-plan"><i class="fas fa-chart-line"></i> Development Plan</a></li>
+    <li><a href="/about/affiliation"><i class="fas fa-university"></i> Affiliation University</a></li>
+    <li><a href="/about/accreditation"><i class="fas fa-star"></i> Accreditation Status</a></li>
+    <li><a href="/about/facilities"><i class="fas fa-tools"></i> Facilities</a></li>
+  </ul></div></aside>
+  <div><div class="content-card">
+    <h2><i class="fas fa-certificate"></i> AISHE Certificate</h2>
+    <p>The college is registered with the <strong>All India Survey on Higher Education (AISHE)</strong>, Ministry of Education, Government of India.</p>
+    <div class="rti-box">
+      <p><i class="fas fa-info-circle" style="color:var(--accent-dark);"></i> <strong>AISHE Code:</strong> C-XXXXX</p>
+      <p><i class="fas fa-calendar-alt" style="color:var(--accent-dark);"></i> <strong>Registration Year:</strong> 2010-11</p>
+      <p><i class="fas fa-check-circle" style="color:var(--green);"></i> <strong>Status:</strong> Active &amp; Updated</p>
+    </div>
+    <h3>About AISHE</h3>
+    <p>AISHE (All India Survey on Higher Education) is an initiative by the Ministry of Education to collect data on higher educational institutions across India. This data helps in policy planning and resource allocation for education.</p>
+    <p>Our college diligently updates its AISHE data every year to ensure accurate representation in national statistics.</p>
+    <div style="margin-top:20px;text-align:center;">
+      <a href="https://aishe.gov.in" target="_blank" rel="noopener" class="btn btn-primary"><i class="fas fa-external-link-alt"></i> Visit AISHE Portal</a>
+    </div>
+  </div></div>
+</div>
+{% endblock %}
