@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block breadcrumb %}<div class="page-hero"><div class="container page-hero-content">
+  <h1><i class="fas fa-user-shield"></i> Manager's Message</h1>
+  <nav class="breadcrumb-nav"><a href="/">Home</a><span>/</span><span>Administration</span><span>/</span><span>Manager's Message</span></nav>
+</div></div>{% endblock %}
+{% block content %}
+<div class="page-layout" style="padding-top:32px;">
+  <aside class="sidebar"><div class="sidebar-card"><div class="sidebar-header"><i class="fas fa-users-cog"></i> Administration</div><ul class="sidebar-links">
+    <li><a href="/admin-msg/principal"><i class="fas fa-user-tie"></i> Principal's Message</a></li>
+    <li><a href="/admin-msg/manager" class="active"><i class="fas fa-user-shield"></i> Manager's Message</a></li>
+    <li><a href="/admin-msg/director"><i class="fas fa-user-graduate"></i> Director's Message</a></li>
+  </ul></div></aside>
+  <div><div class="content-card">
+    <div style="display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;">
+      <div style="text-align:center;flex-shrink:0;">
+        <div style="width:140px;height:160px;background:linear-gradient(135deg,var(--green),#388e3c);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:5rem;color:rgba(255,255,255,.3);"><i class="fas fa-user-shield"></i></div>
+        <p style="font-weight:700;color:var(--primary);margin-top:10px;font-size:.9rem;">[Manager Name]</p>
+        <p style="font-size:.75rem;color:var(--gray);">Manager</p>
+      </div>
+      <div style="flex:1;min-width:280px;">
+        <h2><i class="fas fa-user-shield"></i> Manager's Message</h2>
+        <div style="background:linear-gradient(135deg,var(--green),#388e3c);border-radius:var(--radius);padding:20px;color:white;margin:16px 0;">
+          <i class="fas fa-quote-left" style="font-size:2rem;opacity:.4;"></i>
+          <p style="font-size:1rem;font-style:italic;color:#a5d6a7;margin-top:8px;">"Knowledge is the foundation of a great society. Education is the key to unlock potential."</p>
+        </div>
+        <p>Dear Students and Faculty,</p>
+        <p style="margin-top:12px;">As the Manager of Baba Ramdev Smarak Post Graduate College, I am proud of the institution's growth and its impact on the community. Our aim is to create an environment where education flourishes and students achieve their full potential.</p>
+        <p style="margin-top:10px;">We remain committed to providing the best infrastructure, faculty, and opportunities so that each student can succeed. I encourage you to make the most of your time here and contribute positively to society.</p>
+        <p style="margin-top:10px;font-weight:700;color:var(--primary);">[Manager Name]<br><span style="font-weight:400;font-size:.85rem;color:var(--gray);">Manager, BRSPGC Ghazipur</span></p>
+      </div>
+    </div>
+  </div></div>
+</div>
+{% endblock %}
