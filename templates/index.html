@@ -1,0 +1,405 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- ===== CAMPUS CAROUSEL =====
+     To update images: drop JPG/PNG files named slide-1.jpg … slide-10.jpg
+     into  static/images/carousel/
+     Edit the caption text below for each slide.
+================================================== -->
+<section class="carousel-section" style="margin: 0 -20px;">
+  <div class="carousel" id="campusCarousel" aria-label="Campus Photo Gallery">
+
+    <!-- ── SLIDES ── -->
+    <div class="carousel-track-wrapper">
+      <div class="carousel-track" id="carouselTrack">
+
+        {% set slides = [
+          ('slide-1.jpg',  'College Main Building',        'The pride of Ghazipur – our iconic main building'),
+          ('slide-2.jpg',  'Annual Cultural Fest',         'Rangotasav – celebrating art, music & culture'),
+          ('slide-3.jpg',  'Science Laboratory',           'State-of-the-art labs powering discovery'),
+          ('slide-4.jpg',  'College Library',              '15,000+ books & digital resources for every learner'),
+          ('slide-5.jpg',  'Sports Ground',                'Nurturing champions on and off the field'),
+          ('slide-6.jpg',  'Independence Day Celebration', 'Patriotism, pride & unity on our campus'),
+          ('slide-7.jpg',  'NSS Camp Activities',          'Service before self – NSS volunteers in action'),
+          ('slide-8.jpg',  'Freshers Welcome Ceremony',    'A warm welcome to every new member of our family'),
+          ('slide-9.jpg',  'Convocation Ceremony',         'Celebrating academic milestones & achievements'),
+          ('slide-10.jpg', 'Tree Plantation Drive',        'Building a greener, sustainable campus for tomorrow'),
+        ] %}
+
+        {% for slide in slides %}
+        <div class="carousel-slide" data-index="{{ loop.index0 }}">
+          <img
+            src="/static/images/carousel/{{ slide[0] }}"
+            alt="{{ slide[1] }}"
+            class="carousel-img"
+            loading="{{ 'eager' if loop.first else 'lazy' }}"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          >
+          <!-- Shown when image file is missing -->
+          <div class="carousel-placeholder" style="display:none;">
+            <i class="fas fa-image"></i>
+            <span>{{ slide[1] }}</span>
+            <small>Place <code>{{ slide[0] }}</code> in <code>static/images/carousel/</code></small>
+          </div>
+          <div class="carousel-caption">
+            <h3 class="carousel-caption-title">{{ slide[1] }}</h3>
+            <p class="carousel-caption-sub">{{ slide[2] }}</p>
+          </div>
+        </div>
+        {% endfor %}
+
+      </div><!-- /track -->
+    </div><!-- /wrapper -->
+
+    <!-- ── PREV / NEXT ── -->
+    <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Previous slide">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Next slide">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <!-- ── DOTS ── -->
+    <div class="carousel-dots" id="carouselDots" role="tablist">
+      {% for slide in slides %}
+      <button class="carousel-dot {{ 'active' if loop.first }}"
+              data-slide="{{ loop.index0 }}"
+              role="tab"
+              aria-label="Go to slide {{ loop.index }}"></button>
+      {% endfor %}
+    </div>
+
+    <!-- ── PROGRESS BAR ── -->
+    <div class="carousel-progress" id="carouselProgress"></div>
+
+  </div><!-- /carousel -->
+
+  <!-- Section label -->
+  <div class="carousel-label container">
+    <span class="section-tag" style="margin:0;"><i class="fas fa-images"></i> Campus Life &amp; Events</span>
+    <a href="/gallery" class="btn btn-outline" style="border-color:var(--primary);color:var(--primary);padding:6px 16px;font-size:.78rem;">
+      View Full Gallery <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+
+<!-- ===== HERO ===== -->
+<section class="hero" style="margin: 0 -20px; padding: 0 20px;">
+  <svg class="hero-shapes" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="400" cy="200" r="300"/><circle cx="200" cy="400" r="200"/>
+  </svg>
+  <div class="hero-content">
+    <span class="hero-tag"><i class="fas fa-star"></i> <span data-i18n="hero.tag">Est. 2000 | College Code 0513</span></span>
+    <h1 class="hero-title" data-i18n="hero.title">Excellence in Higher Education</h1>
+    <p class="hero-title-hi">{{ college_name_hi }}</p>
+    <p class="hero-desc" data-i18n="hero.desc">NCTE Approved • SCERT Affiliated • Affiliated to Veer Bahadur Singh Purvanchal University, Jaunpur • UGC Recognition under Section 2(f) &amp; 12(B)</p>
+    <div class="hero-btns">
+      <a href="/admission/process" class="btn btn-primary"><i class="fas fa-file-alt"></i> <span data-i18n="hero.btn.admission">Apply for Admission</span></a>
+      <a href="/about" class="btn btn-outline"><i class="fas fa-info-circle"></i> <span data-i18n="hero.btn.about">About College</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NOTICE TICKER ===== -->
+<div class="notice-ticker" style="margin: 0 -20px;">
+  <div class="ticker-inner container">
+    <div class="ticker-label"><i class="fas fa-bullhorn"></i> Latest Updates</div>
+    <div class="ticker-track">
+      <div class="ticker-items">
+        <span class="ticker-item">Admissions Open 2024-25 for BA, BSc, BCom, MA, MSc, BEd, D.El.Ed (BTC)</span>
+        <span class="ticker-item">Last date for Admission Form Submission – 31 August 2024</span>
+        <span class="ticker-item">Annual Examination Time-Table Released – Check Academic Section</span>
+        <span class="ticker-item">NSS Camp Registration Now Open</span>
+        <span class="ticker-item">Scholarship Applications for SC/ST/OBC students open till 30 September 2024</span>
+        <span class="ticker-item">Anti-Ragging Helpline: 1800-180-5522</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== STATS STRIP ===== -->
+<div class="stats-strip" style="margin: 0 -20px;">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number" data-count="2500" data-suffix="+">0+</div>
+        <div class="stat-label" data-i18n="stat.students">Students Enrolled</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="45" data-suffix="+">0+</div>
+        <div class="stat-label" data-i18n="stat.faculty">Faculty Members</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="7" data-suffix="">0</div>
+        <div class="stat-label" data-i18n="stat.programmes">Programmes Offered</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="24" data-suffix="+">0+</div>
+        <div class="stat-label" data-i18n="stat.years">Years of Excellence</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="5000" data-suffix="+">0+</div>
+        <div class="stat-label" data-i18n="stat.alumni">Alumni Network</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="15000" data-suffix="+">0+</div>
+        <div class="stat-label" data-i18n="stat.books">Library Books</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PROGRAMMES ===== -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-tag"><i class="fas fa-graduation-cap"></i> <span data-i18n="sec.prog.tag">Academic Programmes</span></span>
+    <h2 class="section-title" data-i18n="sec.prog.title">Courses We Offer</h2>
+    <p class="section-subtitle" data-i18n="sec.prog.sub">Empowering students through quality education in diverse disciplines</p>
+  </div>
+  <div class="prog-grid">
+    <div class="prog-card">
+      <div class="prog-icon"><i class="fas fa-book-open"></i></div>
+      <div class="prog-title">B.A.</div>
+      <div class="prog-sub">Bachelor of Arts<br>3 Year Degree Programme</div>
+      <span class="prog-badge">UG Programme</span>
+    </div>
+    <div class="prog-card">
+      <div class="prog-icon"><i class="fas fa-flask"></i></div>
+      <div class="prog-title">B.Sc.</div>
+      <div class="prog-sub">Bachelor of Science<br>3 Year Degree Programme</div>
+      <span class="prog-badge">UG Programme</span>
+    </div>
+    <div class="prog-card">
+      <div class="prog-icon"><i class="fas fa-chart-bar"></i></div>
+      <div class="prog-title">B.Com.</div>
+      <div class="prog-sub">Bachelor of Commerce<br>3 Year Degree Programme</div>
+      <span class="prog-badge">UG Programme</span>
+    </div>
+    <div class="prog-card">
+      <div class="prog-icon"><i class="fas fa-pen-fancy"></i></div>
+      <div class="prog-title">M.A.</div>
+      <div class="prog-sub">Master of Arts<br>2 Year Post-Graduate Programme</div>
+      <span class="prog-badge">PG Programme</span>
+    </div>
+    <div class="prog-card">
+      <div class="prog-icon"><i class="fas fa-atom"></i></div>
+      <div class="prog-title">M.Sc.</div>
+      <div class="prog-sub">Master of Science<br>2 Year Post-Graduate Programme</div>
+      <span class="prog-badge">PG Programme</span>
+    </div>
+    <div class="prog-card">
+      <div class="prog-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+      <div class="prog-title">B.Ed.</div>
+      <div class="prog-sub">Bachelor of Education<br>2 Year Professional Programme<br><em>NCTE Approved</em></div>
+      <span class="prog-badge chip-success">NCTE Approved</span>
+    </div>
+    <div class="prog-card">
+      <div class="prog-icon"><i class="fas fa-child"></i></div>
+      <div class="prog-title">D.El.Ed.</div>
+      <div class="prog-sub">Diploma in Elementary Education (BTC)<br>2 Year Programme<br><em>NCTE &amp; SCERT Affiliated</em></div>
+      <span class="prog-badge chip-warning">NCTE + SCERT</span>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:34px;">
+    <a href="/academic/programmes" class="btn btn-primary"><i class="fas fa-arrow-right"></i> View All Programmes</a>
+  </div>
+</section>
+
+<!-- ===== NOTICE BOARD ===== -->
+<section class="section section-alt" style="margin:0 -20px; padding-left:20px; padding-right:20px;">
+  <div class="section-header">
+    <span class="section-tag"><i class="fas fa-bell"></i> <span data-i18n="sec.notice.tag">Latest Updates</span></span>
+    <h2 class="section-title" data-i18n="sec.notice.title">Notice Board</h2>
+  </div>
+  <div class="notice-grid">
+    <div class="notice-box">
+      <div class="notice-box-header">
+        <span><i class="fas fa-clipboard-list"></i> Notices &amp; Circulars</span>
+        <a href="/info/circulars">View All <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <ul class="notice-list">
+        <li class="notice-item">
+          <div class="notice-date"><div class="day">15</div><div class="mon">Jun</div></div>
+          <div class="notice-info">
+            <a href="/info/circulars">Admission Open 2024-25 – UG &amp; PG Programmes</a>
+            <span class="notice-tag tag-new">New</span>
+          </div>
+        </li>
+        <li class="notice-item">
+          <div class="notice-date"><div class="day">10</div><div class="mon">Jun</div></div>
+          <div class="notice-info">
+            <a href="/academic/examination">Annual Examination Schedule Released</a>
+            <span class="notice-tag tag-exam">Exam</span>
+          </div>
+        </li>
+        <li class="notice-item">
+          <div class="notice-date"><div class="day">05</div><div class="mon">Jun</div></div>
+          <div class="notice-info">
+            <a href="/info/circulars">Admit Card Download for Final Year Students</a>
+            <span class="notice-tag tag-admit">Admit Card</span>
+          </div>
+        </li>
+        <li class="notice-item">
+          <div class="notice-date"><div class="day">01</div><div class="mon">Jun</div></div>
+          <div class="notice-info">
+            <a href="/student/scholarship">Scholarship Application Open – SC/ST/OBC/General</a>
+            <span class="notice-tag tag-new">New</span>
+          </div>
+        </li>
+        <li class="notice-item">
+          <div class="notice-date"><div class="day">28</div><div class="mon">May</div></div>
+          <div class="notice-info">
+            <a href="/info/circulars">Fee Payment Last Date Extended – 30 June 2024</a>
+            <span class="notice-tag tag-exam">Notice</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="notice-box">
+      <div class="notice-box-header">
+        <span><i class="fas fa-calendar-check"></i> Upcoming Events</span>
+        <a href="/info/events">View All <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <ul class="notice-list">
+        <li class="notice-item">
+          <div class="notice-date"><div class="day">20</div><div class="mon">Jul</div></div>
+          <div class="notice-info">
+            <a href="/info/events">Annual Cultural Fest – Rangotasav 2024</a>
+            <span class="notice-tag tag-event">Cultural</span>
+          </div>
+        </li>
+        <li class="notice-item">
+          <div class="notice-date"><div class="day">15</div><div class="mon">Jul</div></div>
+          <div class="notice-info">
+            <a href="/student/nss">NSS Annual Camp – Registration Open</a>
+            <span class="notice-tag tag-new">NSS</span>
+          </div>
+        </li>
+        <li class="notice-item">
+          <div class="notice-date"><div class="day">10</div><div class="mon">Jul</div></div>
+          <div class="notice-info">
+            <a href="/student/sports">Inter-College Sports Tournament</a>
+            <span class="notice-tag tag-event">Sports</span>
+          </div>
+        </li>
+        <li class="notice-item">
+          <div class="notice-date"><div class="day">01</div><div class="mon">Jul</div></div>
+          <div class="notice-info">
+            <a href="/info/events">Freshers' Welcome Ceremony 2024</a>
+            <span class="notice-tag tag-event">Event</span>
+          </div>
+        </li>
+        <li class="notice-item">
+          <div class="notice-date"><div class="day">26</div><div class="mon">Jun</div></div>
+          <div class="notice-info">
+            <a href="/info/events">Guest Lecture – Career &amp; Guidance Program</a>
+            <span class="notice-tag tag-admit">Lecture</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUICK LINKS ===== -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-tag"><i class="fas fa-link"></i> <span data-i18n="sec.ql.tag">Quick Access</span></span>
+    <h2 class="section-title" data-i18n="sec.ql.title">Quick Links</h2>
+  </div>
+  <div class="quick-grid">
+    <a href="/admission/process" class="quick-card">
+      <i class="fas fa-file-signature"></i>
+      <p data-i18n="ql.admission">Admission</p>
+    </a>
+    <a href="/admission/fee-structure" class="quick-card">
+      <i class="fas fa-rupee-sign"></i>
+      <p data-i18n="ql.fee">Fee Structure</p>
+    </a>
+    <a href="/academic/examination" class="quick-card">
+      <i class="fas fa-pen-alt"></i>
+      <p data-i18n="ql.exam">Examination</p>
+    </a>
+    <a href="/academic/library" class="quick-card">
+      <i class="fas fa-book"></i>
+      <p data-i18n="ql.library">Library</p>
+    </a>
+    <a href="/academic/calendar" class="quick-card">
+      <i class="fas fa-calendar-alt"></i>
+      <p data-i18n="ql.calendar">Academic Calendar</p>
+    </a>
+    <a href="/student/scholarship" class="quick-card">
+      <i class="fas fa-medal"></i>
+      <p data-i18n="ql.scholarship">Scholarship</p>
+    </a>
+    <a href="/student/nss" class="quick-card">
+      <i class="fas fa-hands-helping"></i>
+      <p data-i18n="ql.nss">NSS</p>
+    </a>
+    <a href="/gallery" class="quick-card">
+      <i class="fas fa-images"></i>
+      <p data-i18n="ql.gallery">Gallery</p>
+    </a>
+    <a href="/rti" class="quick-card">
+      <i class="fas fa-balance-scale"></i>
+      <p data-i18n="ql.rti">RTI</p>
+    </a>
+    <a href="/anti-ragging" class="quick-card">
+      <i class="fas fa-shield-alt"></i>
+      <p data-i18n="ql.antiragging">Anti Ragging</p>
+    </a>
+    <a href="/faculty" class="quick-card">
+      <i class="fas fa-users"></i>
+      <p data-i18n="ql.faculty">Faculty</p>
+    </a>
+    <a href="/contact" class="quick-card">
+      <i class="fas fa-phone-alt"></i>
+      <p data-i18n="ql.contact">Contact Us</p>
+    </a>
+  </div>
+</section>
+
+<!-- ===== ABOUT STRIP ===== -->
+<section class="section section-alt" style="margin:0 -20px; padding-left:20px; padding-right:20px;">
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;">
+    <div>
+      <span class="section-tag"><i class="fas fa-university"></i> <span data-i18n="sec.about.tag">About Us</span></span>
+      <h2 style="font-size:1.8rem; font-weight:800; color:var(--primary); margin:12px 0 16px;">
+        {{ college_name_hi }}
+      </h2>
+      <p style="color:var(--gray); line-height:1.9; margin-bottom:14px;">
+        Baba Ramdev Smarak Post Graduate College, Bartar, Nonhara, Ghazipur (U.P.) is a premier institution
+        of higher education committed to fostering academic excellence, research, and holistic development of students.
+      </p>
+      <p style="color:var(--gray); line-height:1.9; margin-bottom:22px;">
+        Affiliated to <strong>Veer Bahadur Singh Purvanchal University, Jaunpur</strong>, NCTE approved for
+        B.Ed. and D.El.Ed. (BTC) programmes and affiliated to SCERT. The college holds UGC recognition
+        under <strong>Section 2(f) &amp; 12(B)</strong>.
+      </p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:24px;">
+        <span class="chip chip-primary"><i class="fas fa-certificate"></i> UGC 2(f) &amp; 12(B)</span>
+        <span class="chip chip-success"><i class="fas fa-check-circle"></i> NCTE Approved</span>
+        <span class="chip chip-warning"><i class="fas fa-link"></i> SCERT Affiliated</span>
+        <span class="chip chip-primary"><i class="fas fa-university"></i> VBSPU Affiliated</span>
+      </div>
+      <a href="/about" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Read More</a>
+    </div>
+    <div style="background:linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); border-radius:var(--radius-lg); padding:40px; color:white; text-align:center;">
+      <i class="fas fa-university" style="font-size:5rem; opacity:.3; margin-bottom:20px; display:block;"></i>
+      <h3 style="font-size:1rem; color:rgba(255,255,255,.8); font-weight:400;">College Code</h3>
+      <p style="font-size:3rem; font-weight:900; color:var(--accent-light); margin:8px 0;">0513</p>
+      <hr style="border-color:rgba(255,255,255,.15); margin:16px 0;">
+      <p style="font-size:.82rem; color:rgba(255,255,255,.7); line-height:1.8;">
+        Affiliated to<br><strong style="color:var(--white);">Veer Bahadur Singh Purvanchal University</strong><br>
+        Jaunpur (U.P.)
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+@media(max-width:768px){
+  .section.section-alt > div[style*="grid"]{grid-template-columns:1fr!important}
+}
+</style>
+{% endblock %}
