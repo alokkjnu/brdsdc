@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block breadcrumb %}<div class="page-hero"><div class="container page-hero-content">
+  <h1><i class="fas fa-tasks"></i> Admission Process</h1>
+  <nav class="breadcrumb-nav"><a href="/">Home</a><span>/</span><span>Admission &amp; Fees</span><span>/</span><span>Admission Process</span></nav>
+</div></div>{% endblock %}
+{% block content %}
+<div class="page-layout" style="padding-top:32px;">
+  <aside class="sidebar"><div class="sidebar-card"><div class="sidebar-header"><i class="fas fa-file-alt"></i> Admission &amp; Fees</div><ul class="sidebar-links">
+    <li><a href="/admission/process" class="active"><i class="fas fa-tasks"></i> Admission Process</a></li>
+    <li><a href="/admission/fee-structure"><i class="fas fa-rupee-sign"></i> Fee Structure</a></li>
+    <li><a href="/admission/reservation-roster"><i class="fas fa-list-ol"></i> Reservation Roster</a></li>
+    <li><a href="/admission/labs-infra"><i class="fas fa-flask"></i> Labs &amp; Infrastructure</a></li>
+    <li><a href="/admission/library"><i class="fas fa-book-reader"></i> Library</a></li>
+    <li><a href="/admission/fee-refund"><i class="fas fa-undo-alt"></i> Fee Refund Policy</a></li>
+  </ul></div></aside>
+  <div>
+    <div class="content-card">
+      <h2><i class="fas fa-tasks"></i> Admission Process 2024–25</h2>
+      <p>Admissions are open for all UG, PG, and Professional programmes for the session 2024–25. Follow the steps below:</p>
+      <div style="margin:24px 0;">
+        {% for step in [
+          ('1','fa-download','Obtain Prospectus','Collect the college prospectus from the college office or download it from this website. Read all instructions carefully.'),
+          ('2','fa-file-alt','Fill Application Form','Complete the application form accurately. Submit along with required documents and prescribed fee.'),
+          ('3','fa-file-upload','Submit Documents','Submit self-attested copies of required documents at the college admission counter.'),
+          ('4','fa-list-check','Merit List','Merit list will be displayed on the college notice board and website.'),
+          ('5','fa-rupee-sign','Fee Payment','Selected candidates must pay the admission fee within the stipulated time.'),
+          ('6','fa-id-card','Enrollment','Collect your college ID card and complete the enrollment process.'),
+        ] %}
+        <div style="display:flex;gap:16px;margin-bottom:20px;align-items:flex-start;">
+          <div style="width:44px;height:44px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;flex-shrink:0;">{{ step[0] }}</div>
+          <div>
+            <h3 style="margin:0 0 6px;"><i class="fas {{ step[1] }}" style="color:var(--accent);"></i> {{ step[2] }}</h3>
+            <p>{{ step[3] }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <h3>Required Documents</h3>
+      <ul>
+        <li>10th Mark Sheet &amp; Certificate (Original + 2 copies)</li>
+        <li>12th / Graduation Mark Sheet (as applicable)</li>
+        <li>Transfer Certificate (TC) from previous institution</li>
+        <li>Migration Certificate (for students from other universities)</li>
+        <li>Character Certificate from previous institution</li>
+        <li>Caste Certificate (for SC/ST/OBC candidates)</li>
+        <li>Income Certificate (for scholarship)</li>
+        <li>Domicile Certificate (UP)</li>
+        <li>Passport-size photographs (6 copies)</li>
+        <li>Aadhar Card copy</li>
+      </ul>
+      <div style="margin-top:20px;">
+        <a href="/admission/fee-structure" class="btn btn-primary"><i class="fas fa-rupee-sign"></i> View Fee Structure</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
