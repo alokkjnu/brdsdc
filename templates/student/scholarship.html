@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block breadcrumb %}<div class="page-hero"><div class="container page-hero-content">
+  <h1><i class="fas fa-medal"></i> Scholarship</h1>
+  <nav class="breadcrumb-nav"><a href="/">Home</a><span>/</span><span>Student Life</span><span>/</span><span>Scholarship</span></nav>
+</div></div>{% endblock %}
+{% block content %}
+<div class="page-layout" style="padding-top:32px;">
+  <aside class="sidebar"><div class="sidebar-card"><div class="sidebar-header"><i class="fas fa-user-graduate"></i> Student Life</div><ul class="sidebar-links">
+    <li><a href="/student/nss"><i class="fas fa-hands-helping"></i> NSS</a></li>
+    <li><a href="/student/sports"><i class="fas fa-running"></i> Sports &amp; Curriculum</a></li>
+    <li><a href="/student/training"><i class="fas fa-chalkboard-teacher"></i> Training Program</a></li>
+    <li><a href="/student/scholarship" class="active"><i class="fas fa-medal"></i> Scholarship</a></li>
+    <li><a href="/student/healthcare"><i class="fas fa-heartbeat"></i> Health Care</a></li>
+  </ul></div></aside>
+  <div><div class="content-card">
+    <h2><i class="fas fa-medal"></i> Scholarship Schemes</h2>
+    <p>Various scholarship schemes are available for students from different categories under the UP Government and central government schemes.</p>
+    <div class="table-responsive" style="margin:20px 0;"><table>
+      <tr><th>Scholarship Name</th><th>Category</th><th>Provider</th><th>Portal</th></tr>
+      <tr><td>Pre-Matric Scholarship</td><td>SC / ST / OBC / Minority</td><td>UP Government</td><td>scholarship.up.gov.in</td></tr>
+      <tr><td>Post-Matric Scholarship</td><td>SC / ST / OBC / Minority</td><td>UP Government</td><td>scholarship.up.gov.in</td></tr>
+      <tr><td>Mukhyamantri Abhyudaya Yojana</td><td>EWS / General</td><td>UP Government</td><td>abhyuday.up.gov.in</td></tr>
+      <tr><td>Central Sector Scholarship</td><td>Merit-based (All)</td><td>Ministry of Education</td><td>scholarships.gov.in</td></tr>
+      <tr><td>NSP – National Scholarship Portal</td><td>All Categories</td><td>Central Government</td><td>scholarships.gov.in</td></tr>
+    </table></div>
+    <h3>How to Apply</h3>
+    <ul>
+      <li>Register on the scholarship portal (scholarship.up.gov.in or scholarships.gov.in)</li>
+      <li>Fill in the scholarship form online with correct details</li>
+      <li>Upload required documents (marksheet, income certificate, caste certificate, bank details)</li>
+      <li>Submit through college and get forwarded to the competent authority</li>
+      <li>Last date for application – usually September–October each year</li>
+    </ul>
+    <h3>Required Documents</h3>
+    <ul>
+      <li>Caste Certificate (SC/ST/OBC)</li>
+      <li>Income Certificate (issued by Tehsildar / SDM)</li>
+      <li>Previous year mark sheet</li>
+      <li>Bank account (linked with Aadhaar)</li>
+      <li>Domicile / UP resident certificate</li>
+      <li>Enrollment / Fee receipt from college</li>
+    </ul>
+    <div class="rti-box">
+      <p><i class="fas fa-info-circle" style="color:var(--accent-dark);"></i> For any scholarship-related assistance, contact the college scholarship cell or enquiry counter.</p>
+    </div>
+  </div></div>
+</div>
+{% endblock %}
