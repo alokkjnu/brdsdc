@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block breadcrumb %}<div class="page-hero"><div class="container page-hero-content">
+  <h1><i class="fas fa-star"></i> Accreditation Status</h1>
+  <nav class="breadcrumb-nav"><a href="/">Home</a><span>/</span><a href="/about">About Us</a><span>/</span><span>Accreditation</span></nav>
+</div></div>{% endblock %}
+{% block content %}
+<div class="page-layout" style="padding-top:32px;">
+  <aside class="sidebar"><div class="sidebar-card"><div class="sidebar-header"><i class="fas fa-info-circle"></i> About Us</div><ul class="sidebar-links">
+    <li><a href="/about"><i class="fas fa-building"></i> About College</a></li>
+    <li><a href="/about/vision-mission"><i class="fas fa-eye"></i> Vision &amp; Mission</a></li>
+    <li><a href="/about/aishe"><i class="fas fa-certificate"></i> AISHE Certificate</a></li>
+    <li><a href="/about/development-plan"><i class="fas fa-chart-line"></i> Development Plan</a></li>
+    <li><a href="/about/affiliation"><i class="fas fa-university"></i> Affiliation University</a></li>
+    <li><a href="/about/accreditation" class="active"><i class="fas fa-star"></i> Accreditation Status</a></li>
+    <li><a href="/about/facilities"><i class="fas fa-tools"></i> Facilities</a></li>
+  </ul></div></aside>
+  <div><div class="content-card">
+    <h2><i class="fas fa-star"></i> Accreditation Status</h2>
+    <p>The college is working towards national accreditation to further its commitment to quality education.</p>
+    <div class="table-responsive" style="margin:20px 0;"><table>
+      <tr><th>Accreditation Body</th><th>Status</th><th>Remarks</th></tr>
+      <tr><td>NAAC (National Assessment and Accreditation Council)</td><td><span class="chip chip-warning">In Process</span></td><td>Preparation underway for submission</td></tr>
+      <tr><td>UGC Section 2(f)</td><td><span class="chip chip-success">Recognized</span></td><td>Eligible for UGC grants</td></tr>
+      <tr><td>UGC Section 12(B)</td><td><span class="chip chip-success">Recognized</span></td><td>Eligible for central government grants</td></tr>
+      <tr><td>NCTE (B.Ed.)</td><td><span class="chip chip-success">Approved</span></td><td>Valid Approval</td></tr>
+      <tr><td>NCTE (D.El.Ed./BTC)</td><td><span class="chip chip-success">Approved</span></td><td>Valid Approval</td></tr>
+      <tr><td>SCERT UP (D.El.Ed.)</td><td><span class="chip chip-success">Affiliated</span></td><td>Active Affiliation</td></tr>
+    </table></div>
+    <h3>Quality Initiatives</h3>
+    <ul>
+      <li>Internal Quality Assurance Cell (IQAC) constituted</li>
+      <li>Regular academic audit and self-assessment process</li>
+      <li>Student feedback mechanism in place</li>
+      <li>Faculty development programs conducted annually</li>
+    </ul>
+  </div></div>
+</div>
+{% endblock %}
