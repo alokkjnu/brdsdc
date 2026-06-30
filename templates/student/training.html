@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block breadcrumb %}<div class="page-hero"><div class="container page-hero-content">
+  <h1><i class="fas fa-chalkboard-teacher"></i> Training Program</h1>
+  <nav class="breadcrumb-nav"><a href="/">Home</a><span>/</span><span>Student Life</span><span>/</span><span>Training</span></nav>
+</div></div>{% endblock %}
+{% block content %}
+<div class="page-layout" style="padding-top:32px;">
+  <aside class="sidebar"><div class="sidebar-card"><div class="sidebar-header"><i class="fas fa-user-graduate"></i> Student Life</div><ul class="sidebar-links">
+    <li><a href="/student/nss"><i class="fas fa-hands-helping"></i> NSS</a></li>
+    <li><a href="/student/sports"><i class="fas fa-running"></i> Sports &amp; Curriculum</a></li>
+    <li><a href="/student/training" class="active"><i class="fas fa-chalkboard-teacher"></i> Training Program</a></li>
+    <li><a href="/student/scholarship"><i class="fas fa-medal"></i> Scholarship</a></li>
+    <li><a href="/student/healthcare"><i class="fas fa-heartbeat"></i> Health Care</a></li>
+  </ul></div></aside>
+  <div><div class="content-card">
+    <h2><i class="fas fa-chalkboard-teacher"></i> Training Programs</h2>
+    <p>The college offers various training and skill development programs to enhance employability and career readiness of students.</p>
+    <h3>Career Guidance &amp; Placement Cell</h3>
+    <ul>
+      <li>Career counseling sessions for final-year students</li>
+      <li>Resume writing and interview preparation workshops</li>
+      <li>Campus recruitment drives in collaboration with local industries</li>
+      <li>Guidance for competitive examinations (UPSC, SSC, UP PCS, etc.)</li>
+    </ul>
+    <h3>Teacher Training (B.Ed. / D.El.Ed.)</h3>
+    <ul>
+      <li>Teaching Practice at affiliated schools for 2–4 weeks</li>
+      <li>Micro-teaching sessions and demonstration lessons</li>
+      <li>School internship programme</li>
+      <li>Educational psychology and classroom management training</li>
+    </ul>
+    <h3>Skill Development Programs</h3>
+    <ul>
+      <li>Computer basics and MS Office training</li>
+      <li>Communication skills and spoken English workshops</li>
+      <li>Entrepreneurship Development Program (EDP)</li>
+      <li>Digital literacy and social media awareness</li>
+    </ul>
+    <h3>Special Programs</h3>
+    <ul>
+      <li>Yoga and meditation workshops (monthly)</li>
+      <li>First Aid and disaster management training</li>
+      <li>Legal literacy workshops for students</li>
+    </ul>
+  </div></div>
+</div>
+{% endblock %}
