@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block breadcrumb %}<div class="page-hero"><div class="container page-hero-content">
+  <h1><i class="fas fa-bullhorn"></i> Circulars &amp; Notices</h1>
+  <nav class="breadcrumb-nav"><a href="/">Home</a><span>/</span><span>Information</span><span>/</span><span>Circulars</span></nav>
+</div></div>{% endblock %}
+{% block content %}
+<div class="page-layout" style="padding-top:32px;">
+  <aside class="sidebar"><div class="sidebar-card"><div class="sidebar-header"><i class="fas fa-info"></i> Information</div><ul class="sidebar-links">
+    <li><a href="/info/rti"><i class="fas fa-balance-scale"></i> RTI Act</a></li>
+    <li><a href="/info/circulars" class="active"><i class="fas fa-bullhorn"></i> Circular &amp; Notice</a></li>
+    <li><a href="/info/announcements"><i class="fas fa-bell"></i> Announcements</a></li>
+    <li><a href="/info/newsletter"><i class="fas fa-newspaper"></i> News Letter</a></li>
+    <li><a href="/info/events"><i class="fas fa-calendar-check"></i> Events</a></li>
+  </ul></div></aside>
+  <div><div class="content-card">
+    <h2><i class="fas fa-bullhorn"></i> Circulars &amp; Notices</h2>
+    <p>Official circulars, notices, and orders issued by the college administration.</p>
+    <div class="notice-list" style="max-height:none;border:1px solid var(--border);border-radius:var(--radius);">
+      {% for n in [
+        ('15 Jun 2024','Admission Notice 2024-25 – UG &amp; PG Programmes Open','Admission','tag-new'),
+        ('10 Jun 2024','Annual Examination Schedule 2024 – Final Year Students','Examination','tag-exam'),
+        ('05 Jun 2024','Admit Card Download Link for Final Year Students','Examination','tag-admit'),
+        ('01 Jun 2024','Scholarship Application 2024-25 – Last Date 30 September','Scholarship','tag-new'),
+        ('28 May 2024','Fee Payment Last Date Extended to 30 June 2024','Finance','tag-exam'),
+        ('20 May 2024','NSS Camp Registration – June 2024','NSS','tag-event'),
+        ('15 May 2024','College Holiday List – June to July 2024','General','tag-event'),
+        ('10 May 2024','Practical Examination Schedule – B.Sc. &amp; B.Ed.','Examination','tag-exam'),
+        ('01 May 2024','Annual Sports Day – 15 February 2025','Sports','tag-event'),
+        ('20 Apr 2024','Internal Assessment Results – December 2023','Results','tag-exam'),
+      ] %}
+      <div class="notice-item">
+        <div class="notice-date">
+          <div class="day">{{ n[0].split(' ')[0] }}</div>
+          <div class="mon">{{ n[0].split(' ')[1] }}</div>
+        </div>
+        <div class="notice-info">
+          <a href="#"><i class="fas fa-file-alt"></i> {{ n[1] }}</a>
+          <span class="notice-tag {{ n[3] }}">{{ n[2] }}</span>
+        </div>
+        <div style="margin-left:auto;flex-shrink:0;">
+          <a href="#" style="font-size:.72rem;color:var(--primary);"><i class="fas fa-download"></i> PDF</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div></div>
+</div>
+{% endblock %}
