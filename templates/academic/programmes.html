@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block breadcrumb %}<div class="page-hero"><div class="container page-hero-content">
+  <h1><i class="fas fa-graduation-cap"></i> Academic Programmes</h1>
+  <nav class="breadcrumb-nav"><a href="/">Home</a><span>/</span><span>Academic</span><span>/</span><span>Programmes</span></nav>
+</div></div>{% endblock %}
+{% block content %}
+<div class="page-layout" style="padding-top:32px;">
+  <aside class="sidebar"><div class="sidebar-card"><div class="sidebar-header"><i class="fas fa-book-open"></i> Academic</div><ul class="sidebar-links">
+    <li><a href="/academic/programmes" class="active"><i class="fas fa-graduation-cap"></i> Programmes</a></li>
+    <li><a href="/academic/examination"><i class="fas fa-pen-alt"></i> Examination</a></li>
+    <li><a href="/academic/statutes"><i class="fas fa-gavel"></i> Statutes / Ordinances</a></li>
+    <li><a href="/academic/library"><i class="fas fa-book"></i> Library</a></li>
+    <li><a href="/academic/calendar"><i class="fas fa-calendar-alt"></i> Academic Calendar</a></li>
+  </ul></div></aside>
+  <div>
+    <div class="content-card">
+      <h2><i class="fas fa-graduation-cap"></i> Programmes Offered</h2>
+      <p>The college offers the following degree programmes affiliated to Veer Bahadur Singh Purvanchal University, Jaunpur.</p>
+    </div>
+
+    {% for prog in [
+      ('ba','fa-book-open','Bachelor of Arts (B.A.)','3 Years','Undergraduate','chip-primary','Arts &amp; Humanities','Hindi, English, Sanskrit, History, Geography, Economics, Political Science, Sociology, Home Science, Education'),
+      ('bsc','fa-flask','Bachelor of Science (B.Sc.)','3 Years','Undergraduate','chip-primary','Science','Physics, Chemistry, Mathematics, Biology, Zoology, Botany'),
+      ('bcom','fa-chart-bar','Bachelor of Commerce (B.Com.)','3 Years','Undergraduate','chip-primary','Commerce','Accountancy, Business Studies, Economics, Mathematics'),
+      ('ma','fa-pen-fancy','Master of Arts (M.A.)','2 Years','Postgraduate','chip-warning','Arts &amp; Humanities','Hindi, English, History, Geography, Economics, Political Science'),
+      ('msc','fa-atom','Master of Science (M.Sc.)','2 Years','Postgraduate','chip-warning','Science','Mathematics, Physics, Chemistry'),
+      ('bed','fa-chalkboard-teacher','Bachelor of Education (B.Ed.)','2 Years','Professional','chip-success','Teacher Education – NCTE Approved','Pedagogy of School Subjects, Educational Psychology, Inclusive Education'),
+      ('deled','fa-child','D.El.Ed. / BTC','2 Years','Professional','chip-success','Elementary Teacher Education – NCTE + SCERT','Child Development, Language, Mathematics, Environmental Studies'),
+    ] %}
+    <div class="content-card" id="{{ prog[0] }}" style="margin-top:0;">
+      <h2><i class="fas {{ prog[1] }}"></i> {{ prog[2] }}</h2>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;">
+        <span class="chip chip-primary"><i class="fas fa-clock"></i> Duration: {{ prog[3] }}</span>
+        <span class="chip {{ prog[5] }}"><i class="fas fa-layer-group"></i> {{ prog[4] }}</span>
+        <span class="chip chip-warning"><i class="fas fa-folder-open"></i> {{ prog[6] }}</span>
+      </div>
+      <h3>Subjects / Specializations</h3>
+      <p>{{ prog[7] }}</p>
+      <h3>Eligibility</h3>
+      <ul>
+        {% if prog[4] == 'Undergraduate' %}
+        <li>10+2 (Intermediate) passed from a recognized board</li>
+        <li>Minimum 45% marks (40% for reserved categories)</li>
+        {% elif prog[4] == 'Postgraduate' %}
+        <li>Bachelor's degree in relevant subject from a recognized university</li>
+        <li>Minimum 48% marks in graduation</li>
+        {% else %}
+        <li>As per NCTE / SCERT / University norms</li>
+        {% endif %}
+      </ul>
+      <a href="/admission/process" class="btn btn-primary" style="margin-top:12px;"><i class="fas fa-file-alt"></i> Apply Now</a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
