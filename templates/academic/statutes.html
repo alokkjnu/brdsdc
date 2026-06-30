@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block breadcrumb %}<div class="page-hero"><div class="container page-hero-content">
+  <h1><i class="fas fa-gavel"></i> Statutes &amp; Ordinances</h1>
+  <nav class="breadcrumb-nav"><a href="/">Home</a><span>/</span><span>Academic</span><span>/</span><span>Statutes</span></nav>
+</div></div>{% endblock %}
+{% block content %}
+<div class="page-layout" style="padding-top:32px;">
+  <aside class="sidebar"><div class="sidebar-card"><div class="sidebar-header"><i class="fas fa-book-open"></i> Academic</div><ul class="sidebar-links">
+    <li><a href="/academic/programmes"><i class="fas fa-graduation-cap"></i> Programmes</a></li>
+    <li><a href="/academic/examination"><i class="fas fa-pen-alt"></i> Examination</a></li>
+    <li><a href="/academic/statutes" class="active"><i class="fas fa-gavel"></i> Statutes / Ordinances</a></li>
+    <li><a href="/academic/library"><i class="fas fa-book"></i> Library</a></li>
+    <li><a href="/academic/calendar"><i class="fas fa-calendar-alt"></i> Academic Calendar</a></li>
+  </ul></div></aside>
+  <div><div class="content-card">
+    <h2><i class="fas fa-gavel"></i> Statutes &amp; Ordinances</h2>
+    <p>The college follows the statutes and ordinances prescribed by Veer Bahadur Singh Purvanchal University, Jaunpur, UGC, NCTE, and SCERT as applicable.</p>
+    <h3>Governing Documents</h3>
+    <ul>
+      <li>University Act and Statutes of VBSPU, Jaunpur</li>
+      <li>UGC Regulations on Minimum Standards and Procedures for Award of M.Phil./Ph.D. Degrees</li>
+      <li>NCTE Regulations for B.Ed. and D.El.Ed. programmes</li>
+      <li>SCERT Uttar Pradesh – D.El.Ed. regulations</li>
+      <li>UGC Act 1956 – Section 2(f) and 12(B)</li>
+      <li>Right to Education Act, 2009</li>
+    </ul>
+    <h3>College Rules &amp; Regulations</h3>
+    <ul>
+      <li>All students must maintain 75% attendance in each subject to appear in examinations</li>
+      <li>Ragging in any form is strictly prohibited and punishable</li>
+      <li>Students must follow the college dress code on campus</li>
+      <li>Mobile phones are not permitted in classrooms and examination halls</li>
+      <li>Students are responsible for maintaining discipline and decorum on campus</li>
+      <li>Any grievance should be submitted to the Grievance Redressal Committee</li>
+    </ul>
+    <div style="margin-top:20px;">
+      <a href="/static/docs/statutes.pdf" class="btn btn-primary"><i class="fas fa-download"></i> Download Statutes PDF</a>
+    </div>
+  </div></div>
+</div>
+{% endblock %}
