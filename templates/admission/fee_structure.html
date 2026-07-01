@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block breadcrumb %}<div class="page-hero"><div class="container page-hero-content">
+  <h1><i class="fas fa-rupee-sign"></i> Fee Structure</h1>
+  <nav class="breadcrumb-nav"><a href="/">Home</a><span>/</span><span>Admission &amp; Fees</span><span>/</span><span>Fee Structure</span></nav>
+</div></div>{% endblock %}
+{% block content %}
+<div class="page-layout" style="padding-top:32px;">
+  <aside class="sidebar"><div class="sidebar-card"><div class="sidebar-header"><i class="fas fa-file-alt"></i> Admission &amp; Fees</div><ul class="sidebar-links">
+    <li><a href="/admission/process"><i class="fas fa-tasks"></i> Admission Process</a></li>
+    <li><a href="/admission/fee-structure" class="active"><i class="fas fa-rupee-sign"></i> Fee Structure</a></li>
+    <li><a href="/admission/reservation-roster"><i class="fas fa-list-ol"></i> Reservation Roster</a></li>
+    <li><a href="/admission/labs-infra"><i class="fas fa-flask"></i> Labs &amp; Infrastructure</a></li>
+    <li><a href="/admission/library"><i class="fas fa-book-reader"></i> Library</a></li>
+    <li><a href="/admission/fee-refund"><i class="fas fa-undo-alt"></i> Fee Refund Policy</a></li>
+  </ul></div></aside>
+  <div><div class="content-card">
+    <h2><i class="fas fa-rupee-sign"></i> Fee Structure 2024–25</h2>
+    <p>The following fee structure is applicable for the academic session 2024–25. Fees are subject to revision as per university and government orders.</p>
+    <h3>Undergraduate Programmes</h3>
+    <div class="table-responsive"><table>
+      <tr><th>Programme</th><th>Tuition Fee (Annual)</th><th>Other Charges</th><th>Total (Approx.)</th></tr>
+      <tr><td>B.A. I / II / III Year</td><td>₹ 3,000</td><td>₹ 1,500</td><td>₹ 4,500</td></tr>
+      <tr><td>B.Sc. I / II / III Year</td><td>₹ 4,000</td><td>₹ 1,500</td><td>₹ 5,500</td></tr>
+      <tr><td>B.Com. I / II / III Year</td><td>₹ 3,500</td><td>₹ 1,500</td><td>₹ 5,000</td></tr>
+    </table></div>
+    <h3 style="margin-top:24px;">Postgraduate Programmes</h3>
+    <div class="table-responsive"><table>
+      <tr><th>Programme</th><th>Tuition Fee (Per Semester)</th><th>Other Charges</th><th>Total (Approx.)</th></tr>
+      <tr><td>M.A. (All Subjects)</td><td>₹ 3,500</td><td>₹ 1,000</td><td>₹ 4,500</td></tr>
+      <tr><td>M.Sc. (All Subjects)</td><td>₹ 4,500</td><td>₹ 1,000</td><td>₹ 5,500</td></tr>
+    </table></div>
+    <h3 style="margin-top:24px;">Professional Programmes</h3>
+    <div class="table-responsive"><table>
+      <tr><th>Programme</th><th>Tuition Fee (Annual)</th><th>Other Charges</th><th>Total (Approx.)</th></tr>
+      <tr><td>B.Ed. (Year 1 &amp; 2)</td><td>₹ 25,000</td><td>₹ 5,000</td><td>₹ 30,000</td></tr>
+      <tr><td>D.El.Ed. / BTC (Year 1 &amp; 2)</td><td>₹ 10,000</td><td>₹ 2,000</td><td>₹ 12,000</td></tr>
+    </table></div>
+    <div class="rti-box" style="margin-top:20px;">
+      <p><i class="fas fa-info-circle" style="color:var(--accent-dark);"></i> <strong>Note:</strong> SC/ST/OBC students may be eligible for fee reimbursement under government scholarship schemes. Contact the college office for details.</p>
+      <p><i class="fas fa-info-circle" style="color:var(--accent-dark);"></i> Fees once paid are non-refundable except as per the UGC fee refund policy.</p>
+    </div>
+    <a href="/admission/fee-refund" class="btn btn-primary" style="margin-top:16px;"><i class="fas fa-undo-alt"></i> Fee Refund Policy</a>
+  </div></div>
+</div>
+{% endblock %}

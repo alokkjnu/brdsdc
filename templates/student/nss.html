@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% macro student_sidebar(active) %}
+<aside class="sidebar"><div class="sidebar-card"><div class="sidebar-header"><i class="fas fa-user-graduate"></i> Student Life</div><ul class="sidebar-links">
+  <li><a href="/student/nss" class="{{ 'active' if active=='nss' }}"><i class="fas fa-hands-helping"></i> NSS</a></li>
+  <li><a href="/student/sports" class="{{ 'active' if active=='sports' }}"><i class="fas fa-running"></i> Sports &amp; Curriculum</a></li>
+  <li><a href="/student/training" class="{{ 'active' if active=='training' }}"><i class="fas fa-chalkboard-teacher"></i> Training Program</a></li>
+  <li><a href="/student/scholarship" class="{{ 'active' if active=='scholarship' }}"><i class="fas fa-medal"></i> Scholarship</a></li>
+  <li><a href="/student/healthcare" class="{{ 'active' if active=='healthcare' }}"><i class="fas fa-heartbeat"></i> Health Care</a></li>
+</ul></div></aside>
+{% endmacro %}
+{% block breadcrumb %}<div class="page-hero"><div class="container page-hero-content">
+  <h1><i class="fas fa-hands-helping"></i> NSS – National Service Scheme</h1>
+  <nav class="breadcrumb-nav"><a href="/">Home</a><span>/</span><span>Student Life</span><span>/</span><span>NSS</span></nav>
+</div></div>{% endblock %}
+{% block content %}
+<div class="page-layout" style="padding-top:32px;">
+  {{ student_sidebar('nss') }}
+  <div><div class="content-card">
+    <h2><i class="fas fa-hands-helping"></i> National Service Scheme (NSS)</h2>
+    <p>The NSS unit of BRSPGC is actively engaged in community service, social awareness, and youth development activities.</p>
+    <h3>About NSS</h3>
+    <p>National Service Scheme (NSS) is a Central Sector Scheme of Government of India, Ministry of Youth Affairs &amp; Sports. It provides opportunity to the student youth of 11th &amp; 12th Class in schools and UG/PG in colleges through participation in various government led community service activities and programmes.</p>
+    <h3>NSS Activities</h3>
+    <ul>
+      <li>Village adoption and rural development programmes</li>
+      <li>Blood donation camps organized twice a year</li>
+      <li>Swachh Bharat Abhiyan – cleanliness drives</li>
+      <li>Tree plantation and environmental awareness</li>
+      <li>Adult literacy and digital literacy programs</li>
+      <li>Health and hygiene awareness camps</li>
+      <li>National Integration Camp (NIC) participation</li>
+    </ul>
+    <h3>How to Join NSS</h3>
+    <ul>
+      <li>Open to all UG and PG students of the college</li>
+      <li>Register with the NSS Programme Officer at the beginning of academic year</li>
+      <li>Minimum 240 hours of community service required over 2 years</li>
+      <li>NSS certificate issued to students completing required hours</li>
+    </ul>
+    <div class="rti-box">
+      <p><strong>NSS Programme Officer:</strong> [Name], [Department]</p>
+      <p><strong>Contact:</strong> [Phone Number]</p>
+    </div>
+  </div></div>
+</div>
+{% endblock %}

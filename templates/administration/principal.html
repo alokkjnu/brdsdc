@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block breadcrumb %}<div class="page-hero"><div class="container page-hero-content">
+  <h1><i class="fas fa-user-tie"></i> Principal's Message</h1>
+  <nav class="breadcrumb-nav"><a href="/">Home</a><span>/</span><span>Administration</span><span>/</span><span>Principal's Message</span></nav>
+</div></div>{% endblock %}
+{% block content %}
+<div class="page-layout" style="padding-top:32px;">
+  <aside class="sidebar"><div class="sidebar-card"><div class="sidebar-header"><i class="fas fa-users-cog"></i> Administration</div><ul class="sidebar-links">
+    <li><a href="/admin-msg/principal" class="active"><i class="fas fa-user-tie"></i> Principal's Message</a></li>
+    <li><a href="/admin-msg/manager"><i class="fas fa-user-shield"></i> Manager's Message</a></li>
+    <li><a href="/admin-msg/director"><i class="fas fa-user-graduate"></i> Director's Message</a></li>
+  </ul></div></aside>
+  <div><div class="content-card">
+    <div style="display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;">
+      <div style="text-align:center;flex-shrink:0;">
+        <div style="width:140px;height:160px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:5rem;color:rgba(255,255,255,.3);">
+          <i class="fas fa-user-tie"></i>
+        </div>
+        <p style="font-weight:700;color:var(--primary);margin-top:10px;font-size:.9rem;">Dr. [Principal Name]</p>
+        <p style="font-size:.75rem;color:var(--gray);">Principal</p>
+        <p style="font-size:.75rem;color:var(--gray);">M.A., Ph.D.</p>
+      </div>
+      <div style="flex:1;min-width:280px;">
+        <h2><i class="fas fa-user-tie"></i> Principal's Message</h2>
+        <div style="background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:var(--radius);padding:20px;color:white;margin:16px 0;">
+          <i class="fas fa-quote-left" style="font-size:2rem;opacity:.4;"></i>
+          <p style="font-size:1rem;font-style:italic;color:var(--accent-light);margin-top:8px;">"Education is the most powerful weapon which you can use to change the world."</p>
+        </div>
+        <p>Dear Students, Parents, and Well-Wishers,</p>
+        <p style="margin-top:12px;">It is my privilege and honour to welcome you to <strong>Baba Ramdev Smarak Post Graduate College, Bartar, Nonahara,Ghazipur</strong>. This institution has been a beacon of knowledge and excellence in the Ghazipur district for over two decades.</p>
+        <p style="margin-top:10px;">Our college is committed to providing quality education that nurtures not only academic excellence but also character, values, and life skills. We believe that every student has the potential to achieve great things, and our dedicated faculty and staff are here to guide and support you every step of the way.</p>
+        <p style="margin-top:10px;">The college offers a wide range of programmes from undergraduate to postgraduate levels, including the NCTE-approved B.Ed. and D.El.Ed. (BTC) programmes. I invite all aspiring students to join us and be a part of this journey towards a bright future.</p>
+        <p style="margin-top:10px;">With warm regards,</p>
+        <p style="font-weight:700;color:var(--primary);margin-top:6px;">Dr. [Principal Name]<br><span style="font-weight:400;font-size:.85rem;color:var(--gray);">Principal, BRSPGC Ghazipur</span></p>
+      </div>
+    </div>
+  </div></div>
+</div>
+{% endblock %}

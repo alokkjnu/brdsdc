@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block breadcrumb %}<div class="page-hero"><div class="container page-hero-content">
+  <h1><i class="fas fa-undo-alt"></i> Fee Refund Policy</h1>
+  <nav class="breadcrumb-nav"><a href="/">Home</a><span>/</span><span>Admission &amp; Fees</span><span>/</span><span>Fee Refund Policy</span></nav>
+</div></div>{% endblock %}
+{% block content %}
+<div class="page-layout" style="padding-top:32px;">
+  <aside class="sidebar"><div class="sidebar-card"><div class="sidebar-header"><i class="fas fa-file-alt"></i> Admission &amp; Fees</div><ul class="sidebar-links">
+    <li><a href="/admission/process"><i class="fas fa-tasks"></i> Admission Process</a></li>
+    <li><a href="/admission/fee-structure"><i class="fas fa-rupee-sign"></i> Fee Structure</a></li>
+    <li><a href="/admission/reservation-roster"><i class="fas fa-list-ol"></i> Reservation Roster</a></li>
+    <li><a href="/admission/labs-infra"><i class="fas fa-flask"></i> Labs &amp; Infrastructure</a></li>
+    <li><a href="/admission/library"><i class="fas fa-book-reader"></i> Library</a></li>
+    <li><a href="/admission/fee-refund" class="active"><i class="fas fa-undo-alt"></i> Fee Refund Policy</a></li>
+  </ul></div></aside>
+  <div><div class="content-card">
+    <h2><i class="fas fa-undo-alt"></i> Fee Refund Policy</h2>
+    <p>The fee refund policy of the college is as per the UGC guidelines and university norms. Students seeking withdrawal of admission may claim refund as follows:</p>
+    <div class="table-responsive" style="margin:20px 0;"><table>
+      <tr><th>Date of Cancellation</th><th>Refund %</th><th>Deduction</th></tr>
+      <tr><td>15 days before the start of classes</td><td>100%</td><td>Only processing fee (₹ 500) deducted</td></tr>
+      <tr><td>Before the last date of admission but after commencement of classes</td><td>80%</td><td>20% of tuition fee deducted</td></tr>
+      <tr><td>Within 30 days after last date of admission</td><td>50%</td><td>50% of tuition fee deducted</td></tr>
+      <tr><td>After 30 days from last date of admission</td><td>0%</td><td>No refund</td></tr>
+    </table></div>
+    <h3>Refund Process</h3>
+    <ul>
+      <li>Submit a written application for withdrawal/cancellation to the Principal</li>
+      <li>Attach all original fee receipts with the application</li>
+      <li>Refund will be processed within 15 working days</li>
+      <li>Refund will be made via NEFT/RTGS to the student's bank account</li>
+    </ul>
+    <div class="alert-danger" style="margin-top:20px;">
+      <h3><i class="fas fa-exclamation-triangle"></i> Important Note</h3>
+      <p>No refund shall be applicable for students who have been expelled or whose admission has been cancelled on disciplinary grounds.</p>
+    </div>
+  </div></div>
+</div>
+{% endblock %}

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── Primary SEO ── -->
+  <title>{% block title %}{{ page_title }} | BRSM — Baba Ramdev Smarak Mahavidyalaya, Ghazipur{% endblock %}</title>
+  <meta name="description"
+    content="{% block meta_description %}Official website of Baba Ramdev Smarak Mahavidyalaya (BRSM), Bartar, Nonahara, Ghazipur, Uttar Pradesh. Best college in Ghazipur offering BA, BSc, BCom, MA, MSc, BEd and D.El.Ed (BTC) programmes. Affiliated to VBSPU Jaunpur. NCTE Approved.{% endblock %}" />
+  <meta name="keywords"
+    content="{% block meta_keywords %}Baba Ramdev Smarak Mahavidyalaya, BRSM, Baba Ramdev Smarak College, college Ghazipur, top college in Ghazipur, BA BSc BCom MA MSc BEd DElEd BTC, VBSPU Jaunpur affiliated, NCTE approved college UP, UGC recognised, Bartar Nonahara, higher education Uttar Pradesh{% endblock %}" />
+  <meta name="author" content="Baba Ramdev Smarak Mahavidyalaya" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="{{ request.url }}" />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BRSM — Baba Ramdev Smarak Mahavidyalaya" />
+  <meta property="og:title"
+    content="{% block og_title %}{{ page_title }} | Baba Ramdev Smarak Mahavidyalaya{% endblock %}" />
+  <meta property="og:description"
+    content="{% block og_description %}Baba Ramdev Smarak Mahavidyalaya, Ghazipur U.P. — BA, BSc, BCom, MA, MSc, BEd, D.El.Ed. Affiliated to VBSPU Jaunpur. NCTE Approved.{% endblock %}" />
+  <meta property="og:url" content="{{ request.url }}" />
+  <meta property="og:image" content="{{ request.url.scheme }}://{{ request.url.netloc }}/static/images/logo.webp" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="{% block tw_title %}{{ page_title }} | Baba Ramdev Smarak Mahavidyalaya{% endblock %}" />
+  <meta name="twitter:description"
+    content="{% block tw_description %}Official website of Baba Ramdev Smarak Mahavidyalaya, Ghazipur (U.P.) — Affiliated to VBSPU Jaunpur.{% endblock %}" />
+  <meta name="twitter:image" content="{{ request.url.scheme }}://{{ request.url.netloc }}/static/images/logo.webp" />
+
+  <!-- ── Favicon ── -->
+  <link rel="icon" type="image/png" href="/static/images/favicon.webp" />
+  <link rel="apple-touch-icon" href="/static/images/favicon.webp" />
+
+  <!-- ── Structured Data (JSON-LD) ── -->
+  {% block structured_data %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollegeOrUniversity",
+    "name": "Baba Ramdev Smarak Mahavidyalaya",
+    "alternateName": ["BRSM", "Baba Ramdev Smarak College", "\u092c\u093e\u092c\u093e \u0930\u093e\u092e\u0926\u0947\u0935 \u0938\u094d\u092e\u093e\u0930\u0915 \u092e\u0939\u093e\u0935\u093f\u0926\u094d\u092f\u093e\u0932\u092f"],
+    "url": "{{ request.url.scheme }}://{{ request.url.netloc }}/",
+    "logo": "{{ request.url.scheme }}://{{ request.url.netloc }}/static/images/logo.webp",
+    "description": "Baba Ramdev Smarak Mahavidyalaya, Bartar, Nonahara, Ghazipur (U.P.) — Best College in Ghazipur. Affiliated to VBSPU Jaunpur. NCTE Approved.",
+    "foundingDate": "2000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bartar, Nonahara",
+      "addressLocality": "Ghazipur",
+      "addressRegion": "Uttar Pradesh",
+      "postalCode": "233303",
+      "addressCountry": "IN"
+    },
+    "telephone": "+91-9984620802",
+    "email": "babaramdevsmarak@gmail.com",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Academic Programmes",
+      "itemListElement": [
+        {"@type": "Course", "name": "Bachelor of Arts (B.A.)"},
+        {"@type": "Course", "name": "Bachelor of Science (B.Sc.)"},
+        {"@type": "Course", "name": "Bachelor of Commerce (B.Com.)"},
+        {"@type": "Course", "name": "Master of Arts (M.A.)"},
+        {"@type": "Course", "name": "Master of Science (M.Sc.)"},
+        {"@type": "Course", "name": "Bachelor of Education (B.Ed.)"},
+        {"@type": "Course", "name": "Diploma in Elementary Education D.El.Ed. (BTC)"}
+      ]
+    },
+    "parentOrganization": {
+      "@type": "CollegeOrUniversity",
+      "name": "Veer Bahadur Singh Purvanchal University",
+      "alternateName": "VBSPU",
+      "address": {"@type": "PostalAddress", "addressLocality": "Jaunpur", "addressRegion": "Uttar Pradesh", "addressCountry": "IN"}
+    }
+  }
+  </script>
+  {% endblock %}
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="/static/css/style.css" />
+  {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span><i class="fas fa-phone-alt"></i> +91-9984620802</span>
+        <span><i class="fas fa-envelope"></i> babaramdevsmarak@gmail.com</span>
+      </div>
+      <div class="topbar-right">
+        <span><i class="fas fa-map-marker-alt"></i> <span data-i18n="top.location">Bartar, Nonahara, Ghazipur (U.P.)
+            233303</span></span>
+        <span class="college-code"><span data-i18n="top.code">College Code: 0513</span></span>
+        <!-- Language Toggle -->
+        <button class="lang-toggle" id="langToggle" title="Switch Language / भाषा बदलें" aria-label="Language switcher">
+          <span class="lang-opt lang-en-opt active-lang">EN</span>
+          <span class="lang-sep">|</span>
+          <span class="lang-opt lang-hi-opt">हि</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-logo">
+        <img src="/static/images/logo.webp" alt="BRSPGC College Logo" class="logo-img" />
+        <div class="header-text">
+          <h1 class="college-name-hi">{{ college_name_hi }}</h1>
+          <h2 class="college-name-en">{{ college_name_en }}</h2>
+          <p class="college-loc">{{ college_location_hi }} | {{ college_location_en }}</p>
+          <div class="header-badges">
+            <span class="badge"><i class="fas fa-university"></i> Affiliated: VBSPU, Jaunpur</span>
+            <span class="badge badge-green"><i class="fas fa-certificate"></i> UGC Sec 2(f) & 12(B)</span>
+            <span class="badge badge-orange"><i class="fas fa-award"></i> NCTE Approved</span>
+            <span class="badge badge-blue"><i class="fas fa-link"></i> SCERT Affiliated</span>
+          </div>
+        </div>
+      </div>
+      <div class="header-emblem">
+        <img src="/static/images/emblem.png" alt="Emblem" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="mainNav">
+    <div class="container nav-inner">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+
+        <li class="nav-item {{ 'active' if active_page=='home' }}">
+          <a href="/" class="nav-link"><i class="fas fa-home"></i> <span data-i18n="nav.home">Home</span></a>
+        </li>
+
+        <li class="nav-item dropdown {{ 'active' if active_page=='about' }}">
+          <a href="#" class="nav-link dropdown-toggle"><i class="fas fa-info-circle"></i> <span
+              data-i18n="nav.about">About Us</span> <i class="fas fa-chevron-down arrow"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/about"><i class="fas fa-building"></i> <span data-i18n="dd.about.college">About
+                  College</span></a></li>
+            <li><a href="/about/vision-mission"><i class="fas fa-eye"></i> <span data-i18n="dd.about.vision">Vision
+                  &amp; Mission</span></a></li>
+            <li><a href="/about/aishe"><i class="fas fa-file-certificate"></i> <span data-i18n="dd.about.aishe">AISHE
+                  Certificate</span></a></li>
+            <li><a href="/about/development-plan"><i class="fas fa-chart-line"></i> <span
+                  data-i18n="dd.about.devplan">College Development Plan</span></a></li>
+            <li><a href="/about/affiliation"><i class="fas fa-university"></i> <span
+                  data-i18n="dd.about.affiliation">Affiliation University</span></a></li>
+            <li><a href="/about/accreditation"><i class="fas fa-star"></i> <span
+                  data-i18n="dd.about.accreditation">Accreditation Status</span></a></li>
+            <li><a href="/about/facilities"><i class="fas fa-tools"></i> <span
+                  data-i18n="dd.about.facilities">Facilities</span></a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown {{ 'active' if active_page=='admin_msg' }}">
+          <a href="#" class="nav-link dropdown-toggle"><i class="fas fa-users-cog"></i> <span
+              data-i18n="nav.admin">Administration</span> <i class="fas fa-chevron-down arrow"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/admin-msg/principal"><i class="fas fa-user-tie"></i> <span
+                  data-i18n="dd.admin.principal">Principal's Message</span></a></li>
+            <li><a href="/admin-msg/manager"><i class="fas fa-user-shield"></i> <span
+                  data-i18n="dd.admin.manager">Manager's Message</span></a></li>
+            <li><a href="/admin-msg/director"><i class="fas fa-user-graduate"></i> <span
+                  data-i18n="dd.admin.director">Director's Message</span></a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown {{ 'active' if active_page=='academic' }}">
+          <a href="#" class="nav-link dropdown-toggle"><i class="fas fa-book-open"></i> <span
+              data-i18n="nav.academic">Academic</span> <i class="fas fa-chevron-down arrow"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/academic/programmes"><i class="fas fa-graduation-cap"></i> <span
+                  data-i18n="dd.academic.programmes">Programmes</span></a></li>
+            <li><a href="/academic/examination"><i class="fas fa-pen-alt"></i> <span
+                  data-i18n="dd.academic.exam">Examination</span></a></li>
+            <li><a href="/academic/statutes"><i class="fas fa-gavel"></i> <span
+                  data-i18n="dd.academic.statutes">Statutes / Ordinances</span></a></li>
+            <li><a href="/academic/library"><i class="fas fa-book"></i> <span
+                  data-i18n="dd.academic.library">Library</span></a></li>
+            <li><a href="/academic/calendar"><i class="fas fa-calendar-alt"></i> <span
+                  data-i18n="dd.academic.calendar">Academic Calendar</span></a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown {{ 'active' if active_page=='admission' }}">
+          <a href="#" class="nav-link dropdown-toggle"><i class="fas fa-file-alt"></i> <span
+              data-i18n="nav.admission">Admission &amp; Fees</span> <i class="fas fa-chevron-down arrow"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/admission/process"><i class="fas fa-tasks"></i> <span
+                  data-i18n="dd.admission.process">Admission Process</span></a></li>
+            <li><a href="/admission/fee-structure"><i class="fas fa-rupee-sign"></i> <span
+                  data-i18n="dd.admission.fee">Fee Structure</span></a></li>
+            <li><a href="/admission/reservation-roster"><i class="fas fa-list-ol"></i> <span
+                  data-i18n="dd.admission.roster">Reservation Roster</span></a></li>
+            <li><a href="/admission/labs-infra"><i class="fas fa-flask"></i> <span data-i18n="dd.admission.labs">Labs
+                  &amp; Infrastructure</span></a></li>
+            <li><a href="/admission/library"><i class="fas fa-book-reader"></i> <span
+                  data-i18n="dd.admission.library">Library</span></a></li>
+            <li><a href="/admission/fee-refund"><i class="fas fa-undo-alt"></i> <span
+                  data-i18n="dd.admission.refund">Fee Refund Policy</span></a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown {{ 'active' if active_page=='student' }}">
+          <a href="#" class="nav-link dropdown-toggle"><i class="fas fa-user-graduate"></i> <span
+              data-i18n="nav.student">Student Life</span> <i class="fas fa-chevron-down arrow"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/student/nss"><i class="fas fa-hands-helping"></i> <span
+                  data-i18n="dd.student.nss">NSS</span></a></li>
+            <li><a href="/student/sports"><i class="fas fa-running"></i> <span data-i18n="dd.student.sports">Sports
+                  &amp; Curriculum</span></a></li>
+            <li><a href="/student/training"><i class="fas fa-chalkboard-teacher"></i> <span
+                  data-i18n="dd.student.training">Training Program</span></a></li>
+            <li><a href="/student/scholarship"><i class="fas fa-medal"></i> <span
+                  data-i18n="dd.student.scholarship">Scholarship</span></a></li>
+            <li><a href="/student/healthcare"><i class="fas fa-heartbeat"></i> <span
+                  data-i18n="dd.student.healthcare">Health Care</span></a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown {{ 'active' if active_page=='info' }}">
+          <a href="#" class="nav-link dropdown-toggle"><i class="fas fa-info"></i> <span
+              data-i18n="nav.info">Information</span> <i class="fas fa-chevron-down arrow"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/info/rti"><i class="fas fa-balance-scale"></i> <span data-i18n="dd.info.rti">Right to
+                  Information Act</span></a></li>
+            <li><a href="/info/circulars"><i class="fas fa-bullhorn"></i> <span data-i18n="dd.info.circulars">Circular
+                  &amp; Notice</span></a></li>
+            <li><a href="/info/announcements"><i class="fas fa-bell"></i> <span
+                  data-i18n="dd.info.announcements">Announcement</span></a></li>
+            <li><a href="/info/newsletter"><i class="fas fa-newspaper"></i> <span data-i18n="dd.info.newsletter">News
+                  Letter</span></a></li>
+            <li><a href="/info/events"><i class="fas fa-calendar-check"></i> <span
+                  data-i18n="dd.info.events">Events</span></a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item {{ 'active' if active_page=='faculty' }}">
+          <a href="/faculty" class="nav-link"><i class="fas fa-chalkboard-teacher"></i> <span
+              data-i18n="nav.faculty">Faculty</span></a>
+        </li>
+
+        <li class="nav-item {{ 'active' if active_page=='gallery' }}">
+          <a href="/gallery" class="nav-link"><i class="fas fa-images"></i> <span
+              data-i18n="nav.gallery">Gallery</span></a>
+        </li>
+
+        <li class="nav-item {{ 'active' if active_page=='contact' }}">
+          <a href="/contact" class="nav-link"><i class="fas fa-envelope-open-text"></i> <span
+              data-i18n="nav.contact">Contact</span></a>
+        </li>
+
+        <li class="nav-item {{ 'active' if active_page=='rti' }}">
+          <a href="/rti" class="nav-link nav-rti"><i class="fas fa-balance-scale"></i> <span
+              data-i18n="nav.rti">RTI</span></a>
+        </li>
+
+        <li class="nav-item {{ 'active' if active_page=='anti_ragging' }}">
+          <a href="/anti-ragging" class="nav-link nav-danger"><i class="fas fa-shield-alt"></i> <span
+              data-i18n="nav.antiragging">Anti Ragging</span></a>
+        </li>
+
+      </ul>
+      <!-- Search trigger -->
+      <button class="nav-search-btn" id="searchToggle" title="Search (Ctrl+K)" aria-label="Search site">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== BREADCRUMB ===== -->
+  {% block breadcrumb %}{% endblock %}
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main-content">
+    <div class="container">
+      {% block content %}{% endblock %}
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <h3 class="footer-heading"><i class="fas fa-university"></i> <span data-i18n="footer.about">About
+              College</span></h3>
+          <p class="footer-text">{{ college_name_hi }}, {{ college_location_hi }}</p>
+          <p class="footer-text">{{ college_name_en }}, {{ college_location_en }}</p>
+          <p class="footer-text">College Code: <strong>0513</strong></p>
+          <p class="footer-text">UGC Recognition: Sec 2(f) &amp; 12(B)</p>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading"><i class="fas fa-link"></i> <span data-i18n="footer.links">Quick Links</span></h3>
+          <ul class="footer-links">
+            <li><a href="/about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="/academic/programmes"><i class="fas fa-chevron-right"></i> Programmes</a></li>
+            <li><a href="/admission/process"><i class="fas fa-chevron-right"></i> Admission</a></li>
+            <li><a href="/faculty"><i class="fas fa-chevron-right"></i> Faculty</a></li>
+            <li><a href="/gallery"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+            <li><a href="/anti-ragging"><i class="fas fa-chevron-right"></i> Anti Ragging</a></li>
+            <li><a href="/rti"><i class="fas fa-chevron-right"></i> RTI</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading"><i class="fas fa-graduation-cap"></i> <span
+              data-i18n="footer.programmes">Programmes Offered</span></h3>
+          <ul class="footer-links">
+            <li><a href="/academic/programmes#ba"><i class="fas fa-chevron-right"></i> B.A.</a></li>
+            <li><a href="/academic/programmes#bsc"><i class="fas fa-chevron-right"></i> B.Sc.</a></li>
+            <li><a href="/academic/programmes#bcom"><i class="fas fa-chevron-right"></i> B.Com.</a></li>
+            <li><a href="/academic/programmes#ma"><i class="fas fa-chevron-right"></i> M.A.</a></li>
+            <li><a href="/academic/programmes#msc"><i class="fas fa-chevron-right"></i> M.Sc.</a></li>
+            <li><a href="/academic/programmes#bed"><i class="fas fa-chevron-right"></i> B.Ed.</a></li>
+            <li><a href="/academic/programmes#deled"><i class="fas fa-chevron-right"></i> D.El.Ed. (BTC)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading"><i class="fas fa-address-card"></i> <span data-i18n="footer.contact">Contact
+              Us</span></h3>
+          <p class="footer-heading"><i class="fas fa-map-marker-alt"></i> Bartar, Nonahara, Ghazipur (U.P.) 233303</p>
+          <p class="footer-heading"><i class="fas fa-phone"></i> +91-9984620802</p>
+          <p class="footer-heading"><i class="fas fa-envelope"></i> babaramdevsmarak@gmail.com</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p data-i18n="footer.copyright">&copy; 2024 Baba Ramdev Smarak Post Graduate College. All Rights Reserved. Designed & Maintain By <a href="https://amrits.in">Amrit Softwares</a></p>
+        <p data-i18n="footer.affiliation">Affiliated to VBSPU Jaunpur | NCTE Approved | SCERT Affiliated | UGC 2(f)
+          &amp; 12(B)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- ===== SEARCH OVERLAY ===== -->
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Site Search">
+    <div class="search-box">
+      <button class="search-close" id="searchClose" aria-label="Close search"><i class="fas fa-times"></i></button>
+      <div class="search-input-wrap">
+        <i class="fas fa-search search-input-icon"></i>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search pages, topics…" autocomplete="off"
+          spellcheck="false" />
+      </div>
+      <div class="search-results" id="searchResults"></div>
+      <p class="search-hint" id="searchHint">Type to search &mdash; or press <kbd>Ctrl K</kbd> to toggle</p>
+    </div>
+  </div>
+
+  <script src="/static/js/main.js"></script>
+  {% block extra_js %}{% endblock %}
+</body>
+
+</html>

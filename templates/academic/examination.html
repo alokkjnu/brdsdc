@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block breadcrumb %}<div class="page-hero"><div class="container page-hero-content">
+  <h1><i class="fas fa-pen-alt"></i> Examination</h1>
+  <nav class="breadcrumb-nav"><a href="/">Home</a><span>/</span><span>Academic</span><span>/</span><span>Examination</span></nav>
+</div></div>{% endblock %}
+{% block content %}
+<div class="page-layout" style="padding-top:32px;">
+  <aside class="sidebar"><div class="sidebar-card"><div class="sidebar-header"><i class="fas fa-book-open"></i> Academic</div><ul class="sidebar-links">
+    <li><a href="/academic/programmes"><i class="fas fa-graduation-cap"></i> Programmes</a></li>
+    <li><a href="/academic/examination" class="active"><i class="fas fa-pen-alt"></i> Examination</a></li>
+    <li><a href="/academic/statutes"><i class="fas fa-gavel"></i> Statutes / Ordinances</a></li>
+    <li><a href="/academic/library"><i class="fas fa-book"></i> Library</a></li>
+    <li><a href="/academic/calendar"><i class="fas fa-calendar-alt"></i> Academic Calendar</a></li>
+  </ul></div></aside>
+  <div><div class="content-card">
+    <h2><i class="fas fa-pen-alt"></i> Examination Information</h2>
+    <p>All examinations are conducted as per the schedule and guidelines issued by Veer Bahadur Singh Purvanchal University, Jaunpur.</p>
+    <h3>Examination Schedule 2024</h3>
+    <div class="table-responsive"><table>
+      <tr><th>Programme</th><th>Semester/Year</th><th>Exam Month</th><th>Status</th></tr>
+      <tr><td>B.A. I Year</td><td>Annual</td><td>April–May 2024</td><td><span class="chip chip-success">Completed</span></td></tr>
+      <tr><td>B.A. II Year</td><td>Annual</td><td>April–May 2024</td><td><span class="chip chip-success">Completed</span></td></tr>
+      <tr><td>B.A. III Year</td><td>Annual</td><td>April–May 2024</td><td><span class="chip chip-success">Completed</span></td></tr>
+      <tr><td>B.Sc. / B.Com.</td><td>Annual</td><td>April–May 2024</td><td><span class="chip chip-success">Completed</span></td></tr>
+      <tr><td>M.A. / M.Sc.</td><td>Semester</td><td>Nov 2024 / May 2024</td><td><span class="chip chip-warning">Upcoming</span></td></tr>
+      <tr><td>B.Ed.</td><td>Semester</td><td>Nov 2024 / May 2024</td><td><span class="chip chip-warning">Upcoming</span></td></tr>
+      <tr><td>D.El.Ed. (BTC)</td><td>Semester</td><td>Nov 2024</td><td><span class="chip chip-warning">Upcoming</span></td></tr>
+    </table></div>
+    <h3>Important Instructions</h3>
+    <ul>
+      <li>Students must carry their Admit Card to the examination hall</li>
+      <li>Use of electronic devices is strictly prohibited during examinations</li>
+      <li>Students must reach the examination center 30 minutes before the exam</li>
+      <li>No student will be allowed to enter 15 minutes after the exam starts</li>
+      <li>Results will be published on the university website</li>
+    </ul>
+    <h3>Useful Links</h3>
+    <ul>
+      <li><a href="https://vbspu.ac.in" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> University Exam Portal</a></li>
+      <li><a href="#"><i class="fas fa-download"></i> Download Admit Card</a></li>
+      <li><a href="#"><i class="fas fa-chart-bar"></i> Check Results</a></li>
+    </ul>
+  </div></div>
+</div>
+{% endblock %}

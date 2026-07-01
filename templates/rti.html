@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block breadcrumb %}
+<div class="page-hero">
+  <div class="container page-hero-content">
+    <h1><i class="fas fa-balance-scale"></i> Right to Information (RTI)</h1>
+    <nav class="breadcrumb-nav">
+      <a href="/">Home</a><span>/</span><span>RTI</span>
+    </nav>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div style="padding-top:36px;">
+
+  <div class="content-card">
+    <h2><i class="fas fa-balance-scale"></i> Right to Information Act, 2005</h2>
+    <p>
+      In accordance with the <strong>Right to Information Act, 2005</strong>, the college is committed to transparency
+      and provides information to citizens as per the provisions of the Act.
+    </p>
+
+    <div class="rti-box" style="margin:20px 0;">
+      <h3 style="color:var(--accent-dark);margin-bottom:12px;"><i class="fas fa-user-shield"></i> Public Information Officers (PIO)</h3>
+      <div class="table-responsive"><table>
+        <tr><th>Designation</th><th>Name</th><th>Contact</th></tr>
+        <tr><td>Public Information Officer (PIO)</td><td>[Name of PIO]</td><td>+91-XXXXXXXXXX</td></tr>
+        <tr><td>Appellate Authority</td><td>[Name of Appellate Authority]</td><td>+91-XXXXXXXXXX</td></tr>
+        <tr><td>Assistant PIO</td><td>[Name]</td><td>+91-XXXXXXXXXX</td></tr>
+      </table></div>
+    </div>
+
+    <h3>Disclosures Under Section 4(1)(b)</h3>
+    <ul>
+      <li>Particulars of organization, functions and duties</li>
+      <li>Powers and duties of officers and employees</li>
+      <li>Procedure followed in decision-making process</li>
+      <li>Norms set for the discharge of functions</li>
+      <li>Rules, regulations, instructions, manuals and records</li>
+      <li>Statement of categories of documents held</li>
+      <li>Particulars of consultative committees</li>
+      <li>Directory of officers and employees</li>
+      <li>Monthly remuneration of each officer and employee</li>
+      <li>Budget allocated to each agency</li>
+      <li>Manner of execution of subsidy programmes</li>
+      <li>Particulars of recipients of concessions, permits or authorizations</li>
+      <li>Information available in electronic form</li>
+    </ul>
+
+    <h3 style="margin-top:24px;">How to File an RTI Application</h3>
+    <ol style="padding-left:20px;color:var(--gray);line-height:2;">
+      <li>Write an application in Hindi or English addressed to the Public Information Officer (PIO)</li>
+      <li>Attach an application fee of <strong>₹10</strong> (by cash/DD/postal order) – BPL applicants are exempt</li>
+      <li>Submit in person at the college office or send by post/email</li>
+      <li>Response will be provided within <strong>30 days</strong> of receipt</li>
+      <li>For life &amp; liberty matters, response will be provided within <strong>48 hours</strong></li>
+    </ol>
+
+    <h3 style="margin-top:24px;">RTI Documents Available for Download</h3>
+    <ul>
+      <li><a href="/static/docs/rti-manual.pdf"><i class="fas fa-download"></i> RTI Application Form</a></li>
+      <li><a href="/static/docs/rti-proactive.pdf"><i class="fas fa-download"></i> Proactive Disclosure (Section 4)</a></li>
+      <li><a href="/static/docs/annual-report.pdf"><i class="fas fa-download"></i> Annual Report</a></li>
+    </ul>
+
+    <div style="margin-top:24px;">
+      <a href="https://rtionline.gov.in" target="_blank" rel="noopener" class="btn btn-primary">
+        <i class="fas fa-external-link-alt"></i> RTI Online Portal – Government of India
+      </a>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

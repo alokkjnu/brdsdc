@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block breadcrumb %}
+<div class="page-hero" style="background:linear-gradient(135deg,#b71c1c 0%,#c62828 100%);">
+  <div class="container page-hero-content">
+    <h1><i class="fas fa-shield-alt"></i> Anti-Ragging</h1>
+    <nav class="breadcrumb-nav">
+      <a href="/">Home</a><span>/</span><span>Anti-Ragging</span>
+    </nav>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div style="padding-top:36px;">
+
+  <!-- Emergency Helpline Box -->
+  <div class="helpline-box" style="margin-bottom:28px;">
+    <p style="font-size:.9rem;color:rgba(255,255,255,.8);margin-bottom:4px;">
+      <i class="fas fa-phone-volume"></i> Anti-Ragging National Helpline (24×7 Toll Free)
+    </p>
+    <div class="helpline-number">1800-180-5522</div>
+    <p style="font-size:.82rem;color:rgba(255,255,255,.7);">
+      Also available: <strong>SMS</strong> at 8882-333-666 | <strong>Email:</strong> helpline@antiragging.in
+    </p>
+    <a href="https://antiragging.in" target="_blank" rel="noopener"
+       style="display:inline-block;margin-top:14px;background:var(--accent);color:var(--dark);padding:10px 24px;border-radius:var(--radius);font-weight:700;font-size:.85rem;">
+      <i class="fas fa-external-link-alt"></i> www.antiragging.in
+    </a>
+  </div>
+
+  <!-- Declaration -->
+  <div class="alert-danger" style="margin-bottom:24px;">
+    <h3><i class="fas fa-exclamation-triangle"></i> Zero Tolerance Policy</h3>
+    <p>
+      <strong>Baba Ramdev Smarak Post Graduate College</strong> has a <strong>ZERO TOLERANCE</strong> policy
+      towards ragging in any form. Any act of ragging will be dealt with strictly as per the
+      UGC Regulations on Curbing the Menace of Ragging in Higher Educational Institutions, 2009,
+      and the directions of the Hon'ble Supreme Court of India.
+    </p>
+  </div>
+
+  <div class="content-card" style="margin-bottom:24px;">
+    <h2><i class="fas fa-shield-alt"></i> What is Ragging?</h2>
+    <p>
+      Ragging constitutes one or more of any of the following acts, whether physically, verbally or by any
+      written/electronic means:
+    </p>
+    <ul>
+      <li>Any conduct by any student or students whether by words spoken or written or by an act which has the effect of teasing, treating or handling with rudeness any other student</li>
+      <li>Indulging in rowdy or undisciplined activities which causes or is likely to cause annoyance, hardship or psychological harm or to raise fear or apprehension</li>
+      <li>Asking students to do any act that causes shame or to embarrass or to humiliate</li>
+      <li>Any act that prevents, disrupts or disturbs the regular academic activity of a student</li>
+      <li>Exploiting the services of a junior student for personal benefit</li>
+      <li>Any financial extortion or forceful expenditure</li>
+      <li>Any act of physical abuse including sexual abuse</li>
+    </ul>
+
+    <h2 style="margin-top:28px;"><i class="fas fa-gavel"></i> Punishment for Ragging</h2>
+    <div class="table-responsive"><table>
+      <tr><th>Level of Offence</th><th>Punishment</th></tr>
+      <tr><td>Minor offence (first time)</td><td>Suspension from classes, withholding scholarship</td></tr>
+      <tr><td>Moderate offence</td><td>Cancellation of admission, rustication from institution</td></tr>
+      <tr><td>Serious physical or sexual abuse</td><td>Expulsion, FIR under IPC provisions</td></tr>
+      <tr><td>Abetting ragging</td><td>Same as the principal offender</td></tr>
+    </table></div>
+
+    <h2 style="margin-top:28px;"><i class="fas fa-users-cog"></i> Anti-Ragging Committee</h2>
+    <div class="table-responsive"><table>
+      <tr><th>Designation</th><th>Name</th><th>Contact</th></tr>
+      <tr><td>Chairman (Principal)</td><td>[Principal Name]</td><td>+91-XXXXXXXXXX</td></tr>
+      <tr><td>Faculty Coordinator</td><td>[Faculty Name]</td><td>+91-XXXXXXXXXX</td></tr>
+      <tr><td>Student Representative</td><td>[Student Name]</td><td>—</td></tr>
+      <tr><td>Parent Representative</td><td>[Parent Name]</td><td>—</td></tr>
+      <tr><td>Local Police Liaison</td><td>SHO, [Police Station]</td><td>+91-XXXXXXXXXX</td></tr>
+    </table></div>
+
+    <h2 style="margin-top:28px;"><i class="fas fa-file-signature"></i> Anti-Ragging Undertaking</h2>
+    <p>
+      Every student and their parent/guardian must submit a signed <strong>Anti-Ragging Undertaking</strong>
+      at the time of admission as per UGC directives.
+    </p>
+    <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap;">
+      <a href="https://antiragging.in/Site/Affidavit_Submission.aspx" target="_blank" rel="noopener" class="btn btn-primary">
+        <i class="fas fa-file-alt"></i> Submit Online Undertaking
+      </a>
+      <a href="/static/docs/anti-ragging-undertaking.pdf" class="btn btn-outline" style="border-color:var(--primary);color:var(--primary);">
+        <i class="fas fa-download"></i> Download Undertaking Form
+      </a>
+    </div>
+  </div>
+
+  <!-- Key Links -->
+  <div class="rti-box">
+    <h3 style="color:var(--accent-dark);margin-bottom:14px;"><i class="fas fa-link"></i> Important Links &amp; References</h3>
+    <ul>
+      <li><a href="https://antiragging.in" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> National Anti-Ragging Portal – antiragging.in</a></li>
+      <li><a href="https://ugc.ac.in/pdfnews/6696131_UGC-Regulations-Ragging.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> UGC Regulations on Curbing Ragging, 2009</a></li>
+      <li><a href="https://www.ugc.ac.in" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> UGC – University Grants Commission</a></li>
+    </ul>
+  </div>
+
+</div>
+{% endblock %}

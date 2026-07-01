@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block breadcrumb %}<div class="page-hero"><div class="container page-hero-content">
+  <h1><i class="fas fa-book"></i> Library</h1>
+  <nav class="breadcrumb-nav"><a href="/">Home</a><span>/</span><span>Academic</span><span>/</span><span>Library</span></nav>
+</div></div>{% endblock %}
+{% block content %}
+<div class="page-layout" style="padding-top:32px;">
+  <aside class="sidebar"><div class="sidebar-card"><div class="sidebar-header"><i class="fas fa-book-open"></i> Academic</div><ul class="sidebar-links">
+    <li><a href="/academic/programmes"><i class="fas fa-graduation-cap"></i> Programmes</a></li>
+    <li><a href="/academic/examination"><i class="fas fa-pen-alt"></i> Examination</a></li>
+    <li><a href="/academic/statutes"><i class="fas fa-gavel"></i> Statutes / Ordinances</a></li>
+    <li><a href="/academic/library" class="active"><i class="fas fa-book"></i> Library</a></li>
+    <li><a href="/academic/calendar"><i class="fas fa-calendar-alt"></i> Academic Calendar</a></li>
+  </ul></div></aside>
+  <div><div class="content-card">
+    <h2><i class="fas fa-book"></i> College Library</h2>
+    <p>The college library is a rich repository of knowledge with thousands of books, journals, and digital resources catering to all academic programmes.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px;margin:20px 0;">
+      {% for s in [('15,000+','Total Books'),('50+','Journals &amp; Periodicals'),('200+','Reference Books'),('5','Computers with Internet'),('8 AM–5 PM','Working Hours')] %}
+      <div style="background:var(--primary);color:white;border-radius:var(--radius);padding:20px;text-align:center;">
+        <p style="font-size:1.6rem;font-weight:800;color:var(--accent-light);">{{ s[0] }}</p>
+        <p style="font-size:.75rem;color:rgba(255,255,255,.8);">{{ s[1] }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <h3>Library Rules</h3>
+    <ul>
+      <li>Students must carry their library card to borrow books</li>
+      <li>Maximum 2 books can be issued at a time</li>
+      <li>Books must be returned within 14 days of issue</li>
+      <li>A fine of ₹1 per day will be charged for overdue books</li>
+      <li>Strict silence must be maintained inside the library</li>
+      <li>Damaged or lost books must be replaced or cost reimbursed</li>
+    </ul>
+    <h3>Library Timings</h3>
+    <div class="table-responsive"><table>
+      <tr><th>Day</th><th>Timing</th></tr>
+      <tr><td>Monday – Saturday</td><td>8:00 AM – 5:00 PM</td></tr>
+      <tr><td>Sunday &amp; Public Holidays</td><td>Closed</td></tr>
+    </table></div>
+  </div></div>
+</div>
+{% endblock %}

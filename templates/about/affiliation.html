@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block breadcrumb %}<div class="page-hero"><div class="container page-hero-content">
+  <h1><i class="fas fa-university"></i> Affiliation University</h1>
+  <nav class="breadcrumb-nav"><a href="/">Home</a><span>/</span><a href="/about">About Us</a><span>/</span><span>Affiliation University</span></nav>
+</div></div>{% endblock %}
+{% block content %}
+<div class="page-layout" style="padding-top:32px;">
+  <aside class="sidebar"><div class="sidebar-card"><div class="sidebar-header"><i class="fas fa-info-circle"></i> About Us</div><ul class="sidebar-links">
+    <li><a href="/about"><i class="fas fa-building"></i> About College</a></li>
+    <li><a href="/about/vision-mission"><i class="fas fa-eye"></i> Vision &amp; Mission</a></li>
+    <li><a href="/about/aishe"><i class="fas fa-certificate"></i> AISHE Certificate</a></li>
+    <li><a href="/about/development-plan"><i class="fas fa-chart-line"></i> Development Plan</a></li>
+    <li><a href="/about/affiliation" class="active"><i class="fas fa-university"></i> Affiliation University</a></li>
+    <li><a href="/about/accreditation"><i class="fas fa-star"></i> Accreditation Status</a></li>
+    <li><a href="/about/facilities"><i class="fas fa-tools"></i> Facilities</a></li>
+  </ul></div></aside>
+  <div><div class="content-card">
+    <h2><i class="fas fa-university"></i> Veer Bahadur Singh Purvanchal University</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px;">
+      <div class="rti-box">
+        <h3 style="color:var(--primary);margin-bottom:12px;">University Details</h3>
+        <p><strong>Name:</strong> Veer Bahadur Singh Purvanchal University</p>
+        <p><strong>Location:</strong> Jaunpur, Uttar Pradesh</p>
+        <p><strong>Established:</strong> 1987</p>
+        <p><strong>Type:</strong> State University</p>
+        <p><strong>College Code (BRSPGC):</strong> 0513</p>
+      </div>
+      <div class="rti-box">
+        <h3 style="color:var(--primary);margin-bottom:12px;">Regulatory Bodies</h3>
+        <p><i class="fas fa-check-circle" style="color:var(--green);"></i> <strong>UGC</strong> – University Grants Commission</p>
+        <p><i class="fas fa-check-circle" style="color:var(--green);"></i> <strong>NCTE</strong> – National Council for Teacher Education</p>
+        <p><i class="fas fa-check-circle" style="color:var(--green);"></i> <strong>SCERT</strong> – State Council of Educational Research &amp; Training, UP</p>
+        <p><i class="fas fa-check-circle" style="color:var(--green);"></i> <strong>UGC Sec 2(f) &amp; 12(B)</strong> – Recognized</p>
+      </div>
+    </div>
+    <h3>Affiliation Details</h3>
+    <div class="table-responsive"><table>
+      <tr><th>Programme</th><th>Affiliated Body</th><th>Status</th></tr>
+      <tr><td>B.A. / B.Sc. / B.Com.</td><td>VBSPU Jaunpur</td><td><span class="chip chip-success">Active</span></td></tr>
+      <tr><td>M.A. / M.Sc.</td><td>VBSPU Jaunpur</td><td><span class="chip chip-success">Active</span></td></tr>
+      <tr><td>B.Ed.</td><td>VBSPU Jaunpur + NCTE</td><td><span class="chip chip-success">Active</span></td></tr>
+      <tr><td>D.El.Ed. (BTC)</td><td>SCERT UP + NCTE</td><td><span class="chip chip-success">Active</span></td></tr>
+    </table></div>
+    <div style="margin-top:20px;">
+      <a href="https://vbspu.ac.in" target="_blank" rel="noopener" class="btn btn-primary"><i class="fas fa-external-link-alt"></i> Visit University Website</a>
+    </div>
+  </div></div>
+</div>
+{% endblock %}

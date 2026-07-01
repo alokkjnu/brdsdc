@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block breadcrumb %}
+<div class="page-hero">
+  <div class="container page-hero-content">
+    <h1><i class="fas fa-envelope-open-text"></i> Contact Us</h1>
+    <nav class="breadcrumb-nav">
+      <a href="/">Home</a><span>/</span><span>Contact Us</span>
+    </nav>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div style="padding-top:36px;">
+
+  <!-- Contact Cards Strip -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px;margin-bottom:36px;">
+    {% for c in [
+      ('fa-map-marker-alt','var(--primary)','Address','Bartar, Nonahara,Ghazipur (U.P.) 233303'),
+      ('fa-phone-alt','var(--green)','Phone','+91-9876543210 / +91-9876543211'),
+      ('fa-envelope','var(--orange)','Email','babaramdevsmarak@gmail.com'),
+      ('fa-clock','var(--accent-dark)','Office Hours','Mon–Sat: 9:00 AM – 5:00 PM'),
+    ] %}
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;text-align:center;box-shadow:var(--shadow-sm);">
+      <div style="width:56px;height:56px;background:{{ c[1] }};border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.3rem;color:white;">
+        <i class="fas {{ c[0] }}"></i>
+      </div>
+      <p style="font-weight:700;color:var(--primary);margin-bottom:6px;">{{ c[2] }}</p>
+      <p style="font-size:.8rem;color:var(--gray);">{{ c[3] }}</p>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Contact Grid -->
+  <div class="contact-grid">
+    <!-- Info Card -->
+    <div class="contact-info-card">
+      <h3><i class="fas fa-university"></i> Get In Touch</h3>
+      <div class="contact-detail">
+        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="contact-text">
+          <strong>College Address</strong>
+          बाबा रामदेव स्मारक स्नातकोत्तर महाविद्यालय<br>
+          बरतर, नोनहरा, गाज़ीपुर (उ0प्र0) 233303<br>
+          Bartar, Nonahara,Ghazipur, U.P. – 233303
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+        <div class="contact-text">
+          <strong>Phone Numbers</strong>
+          +91-9876543210<br>+91-9876543211
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+        <div class="contact-text">
+          <strong>Email Address</strong>
+          babaramdevsmarak@gmail.com<br>principal@brspgc.ac.in
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon"><i class="fas fa-university"></i></div>
+        <div class="contact-text">
+          <strong>College Code</strong>
+          0513 | VBSPU Jaunpur
+        </div>
+      </div>
+      <div class="footer-social" style="margin-top:24px;">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form-card">
+      <h3><i class="fas fa-paper-plane"></i> Send Us a Message</h3>
+      <form action="#" method="post" onsubmit="return false;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div class="form-group">
+            <label for="fname">Full Name *</label>
+            <input type="text" id="fname" name="name" class="form-control" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="fphone">Phone Number</label>
+            <input type="tel" id="fphone" name="phone" class="form-control" placeholder="+91-XXXXXXXXXX">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="femail">Email Address *</label>
+          <input type="email" id="femail" name="email" class="form-control" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="fsubject">Subject *</label>
+          <select id="fsubject" name="subject" class="form-control" required>
+            <option value="">-- Select Subject --</option>
+            <option>Admission Enquiry</option>
+            <option>Fee Related</option>
+            <option>Examination</option>
+            <option>Scholarship</option>
+            <option>General Enquiry</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="fmessage">Message *</label>
+          <textarea id="fmessage" name="message" class="form-control" placeholder="Write your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Map -->
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114826.7!2d83.57!3d25.57!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zR2hhemlwdXI!5e0!3m2!1sen!2sin!4v1"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="College Location Map">
+    </iframe>
+  </div>
+</div>
+{% endblock %}

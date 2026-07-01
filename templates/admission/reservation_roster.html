@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block breadcrumb %}<div class="page-hero"><div class="container page-hero-content">
+  <h1><i class="fas fa-list-ol"></i> Reservation Roster</h1>
+  <nav class="breadcrumb-nav"><a href="/">Home</a><span>/</span><span>Admission &amp; Fees</span><span>/</span><span>Reservation Roster</span></nav>
+</div></div>{% endblock %}
+{% block content %}
+<div class="page-layout" style="padding-top:32px;">
+  <aside class="sidebar"><div class="sidebar-card"><div class="sidebar-header"><i class="fas fa-file-alt"></i> Admission &amp; Fees</div><ul class="sidebar-links">
+    <li><a href="/admission/process"><i class="fas fa-tasks"></i> Admission Process</a></li>
+    <li><a href="/admission/fee-structure"><i class="fas fa-rupee-sign"></i> Fee Structure</a></li>
+    <li><a href="/admission/reservation-roster" class="active"><i class="fas fa-list-ol"></i> Reservation Roster</a></li>
+    <li><a href="/admission/labs-infra"><i class="fas fa-flask"></i> Labs &amp; Infrastructure</a></li>
+    <li><a href="/admission/library"><i class="fas fa-book-reader"></i> Library</a></li>
+    <li><a href="/admission/fee-refund"><i class="fas fa-undo-alt"></i> Fee Refund Policy</a></li>
+  </ul></div></aside>
+  <div><div class="content-card">
+    <h2><i class="fas fa-list-ol"></i> Reservation Roster (UP Government Norms)</h2>
+    <p>The college follows the reservation policy as prescribed by the Government of Uttar Pradesh and the affiliated university.</p>
+    <div class="table-responsive" style="margin:20px 0;"><table>
+      <tr><th>Category</th><th>Reservation %</th><th>Eligibility</th></tr>
+      <tr><td>Scheduled Caste (SC)</td><td>21%</td><td>Valid Caste Certificate required</td></tr>
+      <tr><td>Scheduled Tribe (ST)</td><td>2%</td><td>Valid Caste Certificate required</td></tr>
+      <tr><td>Other Backward Classes (OBC)</td><td>27%</td><td>Valid OBC (Non-Creamy Layer) Certificate</td></tr>
+      <tr><td>Economically Weaker Section (EWS)</td><td>10%</td><td>Income &amp; Asset Certificate</td></tr>
+      <tr><td>Persons with Disability (PwD)</td><td>5% (Horizontal)</td><td>Disability Certificate (40%+ disability)</td></tr>
+      <tr><td>Ex-Servicemen Dependents</td><td>As per norms</td><td>Certificate from Sainik Kalyan Office</td></tr>
+      <tr><td>General / Unreserved</td><td>Remaining seats</td><td>Merit-based</td></tr>
+    </table></div>
+    <h3>Important Notes</h3>
+    <ul>
+      <li>All certificates must be issued by competent authority</li>
+      <li>OBC certificate must be of Non-Creamy Layer (valid for current year)</li>
+      <li>EWS certificate must be issued for the current financial year</li>
+      <li>Unfilled reserved seats may be converted to general as per university norms</li>
+      <li>Horizontal reservations are applicable across all categories</li>
+    </ul>
+  </div></div>
+</div>
+{% endblock %}
