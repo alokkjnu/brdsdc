@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   (function () {
     var T = {
       en: {
-        'top.location':'Bartar, Nonhara, Ghazipur (U.P.) 233001','top.code':'College Code: 0513',
+        'top.location':'Bartar, Nonahara,Ghazipur (U.P.) 233303','top.code':'College Code: 0513',
         'nav.home':'Home','nav.about':'About Us','nav.admin':'Administration',
         'nav.academic':'Academic','nav.admission':'Admission & Fees','nav.student':'Student Life',
         'nav.info':'Information','nav.faculty':'Faculty','nav.gallery':'Gallery',
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'ql.antiragging':'Anti Ragging','ql.faculty':'Faculty','ql.contact':'Contact Us'
       },
       hi: {
-        'top.location':'बरतर, नोनहरा, गाज़ीपुर (उ0प्र0) 233001','top.code':'महाविद्यालय कोड: 0513',
+        'top.location':'बरतर, नोनहरा, गाज़ीपुर (उ0प्र0) 233303','top.code':'महाविद्यालय कोड: 0513',
         'nav.home':'होम','nav.about':'हमारे बारे में','nav.admin':'प्रशासन',
         'nav.academic':'शैक्षणिक','nav.admission':'प्रवेश एवं शुल्क','nav.student':'छात्र जीवन',
         'nav.info':'सूचना','nav.faculty':'शिक्षक मंडल','nav.gallery':'गैलरी',

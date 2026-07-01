@@ -9,7 +9,7 @@ from vayuapi import VayuAPI, Jinja2Templates, StaticFiles, Request
 app = VayuAPI(
     title="BRSPGC - Baba Ramdev Smarak Post Graduate College",
     version="1.0.0",
-    description="Official website of Baba Ramdev Smarak Post Graduate College, Bartar, Nonhara, Ghazipur (U.P.)",
+    description="Official website of Baba Ramdev Smarak Post Graduate College, Bartar, Nonahara,Ghazipur (U.P.)",
     docs_enabled=False,
 )
 
@@ -28,7 +28,7 @@ def base_ctx(request: Request, title: str = "", page: str = "") -> dict:
         "site_title": "BRSPGC",
         "college_name_en": "BABA RAMDEV SMARAK POST GRADUATE COLLEGE",
         "college_name_hi": "बाबा रामदेव स्मारक स्नातकोत्तर महाविद्यालय",
-        "college_location_en": "BARTAR, NONHARA, GHAZIPUR (U.P.)",
+        "college_location_en": "BARTAR, NONAHARA, GHAZIPUR (U.P.)",
         "college_location_hi": "बरतर, नोनहरा, गाज़ीपुर (उ0प्र0)",
         "college_code": "0513",
         "affiliation": "Veer Bahadur Singh Purvanchal University, Jaunpur (U.P.)",
