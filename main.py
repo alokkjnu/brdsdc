@@ -306,4 +306,4 @@ async def anti_ragging(request: Request):
 # RUN
 # ─────────────────────────────────────────────
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8000, reload=True)
+    app.run(host="0.0.0.0", port=8009, reload=True)
