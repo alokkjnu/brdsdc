@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'dd.info.events':'Events',
         'footer.about':'About College','footer.links':'Quick Links',
         'footer.programmes':'Programmes Offered','footer.contact':'Contact Us',
-        'footer.copyright':'© 2024 Baba Ramdev Smarak Post Graduate College. All Rights Reserved.',
+        // 'footer.copyright':'© 2024 Baba Ramdev Smarak Post Graduate College. All Rights Reserved. Designed & Maintain By Amrit Softwares',
         'footer.affiliation':'Affiliated to VBSPU Jaunpur | NCTE Approved | SCERT Affiliated | UGC 2(f) & 12(B)',
         'hero.tag':'Est. 2000 | College Code 0513',
         'hero.title':'Excellence in Higher Education',
