@@ -43,7 +43,6 @@ def base_ctx(request: Request, title: str = "", page: str = "") -> dict:
 # ─────────────────────────────────────────────
 @app.get("/")
 async def home(request: Request):
-    
     ctx = base_ctx(request, "Home", "home")
     return templates.TemplateResponse("index.html", ctx)
 
