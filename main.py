@@ -104,7 +104,6 @@ async def principal_msg(request: Request):
 
 @app.get("/admin-msg/manager")
 async def manager_msg(request: Request):
-    
     ctx = base_ctx(request, "Manager's Message", "admin_msg")
     ctx["sub_page"] = "manager"
     return templates.TemplateResponse("administration/manager.html", ctx)
