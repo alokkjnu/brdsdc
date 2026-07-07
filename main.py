@@ -88,7 +88,6 @@ async def accreditation(request: Request):
 
 @app.get("/about/facilities")
 async def facilities(request: Request):
-    
     ctx = base_ctx(request, "Facilities", "about")
     ctx["sub_page"] = "facilities"
     return templates.TemplateResponse("about/facilities.html", ctx)
@@ -99,12 +98,14 @@ async def facilities(request: Request):
 # ─────────────────────────────────────────────
 @app.get("/admin-msg/principal")
 async def principal_msg(request: Request):
+
     ctx = base_ctx(request, "Principal's Message", "admin_msg")
     ctx["sub_page"] = "principal"
     return templates.TemplateResponse("administration/principal.html", ctx)
 
 @app.get("/admin-msg/manager")
 async def manager_msg(request: Request):
+    
     ctx = base_ctx(request, "Manager's Message", "admin_msg")
     ctx["sub_page"] = "manager"
     return templates.TemplateResponse("administration/manager.html", ctx)
