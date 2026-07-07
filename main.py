@@ -98,7 +98,6 @@ async def facilities(request: Request):
 # ─────────────────────────────────────────────
 @app.get("/admin-msg/principal")
 async def principal_msg(request: Request):
-
     ctx = base_ctx(request, "Principal's Message", "admin_msg")
     ctx["sub_page"] = "principal"
     return templates.TemplateResponse("administration/principal.html", ctx)
