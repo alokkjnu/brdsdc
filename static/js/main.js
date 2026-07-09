@@ -1,5 +1,5 @@
 // =========================================================
-// BRSPGC College Website – Main JavaScript
+// BRSM College Website – Main JavaScript
 // =========================================================
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'dd.info.events':'Events',
         'footer.about':'About College','footer.links':'Quick Links',
         'footer.programmes':'Programmes Offered','footer.contact':'Contact Us',
-        // 'footer.copyright':'© 2024 Baba Ramdev Smarak Post Graduate College. All Rights Reserved. Designed & Maintain By Amrit Softwares',
+        // 'footer.copyright':'© 2024 Baba Ramdev Smarak Mahavidyalaya. All Rights Reserved. Designed & Maintain By Amrit Softwares',
         'footer.affiliation':'Affiliated to VBSPU Jaunpur | NCTE Approved | SCERT Affiliated | UGC 2(f) & 12(B)',
         'hero.tag':'Est. 2000 | College Code 0513',
         'hero.title':'Excellence in Higher Education',
@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', function () {
   (function () {
     var PAGES = [
       { title:'Home', url:'/', desc:'College homepage with news, programmes and quick links', cat:'General', icon:'fa-home', kw:'home index' },
-      { title:'About College', url:'/about', desc:'History, overview and information about BRSPGC', cat:'About', icon:'fa-building', kw:'about history overview college' },
+      { title:'About College', url:'/about', desc:'History, overview and information about BRSM', cat:'About', icon:'fa-building', kw:'about history overview college' },
       { title:'Vision & Mission', url:'/about/vision-mission', desc:'Institutional vision, mission and core values', cat:'About', icon:'fa-eye', kw:'vision mission values goals' },
       { title:'AISHE Certificate', url:'/about/aishe', desc:'All India Survey on Higher Education (AISHE) data', cat:'About', icon:'fa-file-alt', kw:'aishe survey certificate' },
       { title:'College Development Plan', url:'/about/development-plan', desc:'Institutional development and growth plans', cat:'About', icon:'fa-chart-line', kw:'development plan growth' },
